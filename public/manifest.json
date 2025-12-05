@@ -1,0 +1,29 @@
+{
+    "name": "Sky Mods - Canvas Modloader",
+    "short_name": "Sky Mods",
+    "description": "Descarga Canvas y LibTSM para personalizar Sky: Children of the Light",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#87CEEB",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        }
+    ],
+    "categories": [
+        "games",
+        "utilities"
+    ],
+    "lang": "es",
+    "dir": "ltr",
+    "scope": "/"
+}

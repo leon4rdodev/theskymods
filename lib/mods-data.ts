@@ -33,7 +33,7 @@ export const modsData: Mod[] = [
     version: "v1.6.7b",
     downloads: 28750,
     updatedAt: "2024-12-02",
-    image: "/canvas.png",
+    image: "/canvas.webp",
     author: "artdeell & lukas0x1",
     size: "15 MB",
     downloadUrl:
@@ -53,7 +53,7 @@ export const modsData: Mod[] = [
     version: "v0.17.0",
     downloads: 15420,
     updatedAt: "2024-12-01",
-    image: "/libtsm.png",
+    image: "/libtsm.webp",
     author: "XeTrinityz",
     size: "2.4 MB",
     downloadUrl:

@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/contexts/language-context";
 import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
-import { Cloud } from "lucide-react";
 
 const nunito = Nunito({
   subsets: ["latin"],

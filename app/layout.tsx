@@ -129,8 +129,8 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   verification: {
-    // Add your verification codes when you have them:
-    // google: 'your-google-site-verification-code',
+    google: "-GLBeiN6eJGBLTtMFeJKw8gSQ5TUbGNn8kkgeP7mUQo",
+    // Add other verification codes when needed:
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },

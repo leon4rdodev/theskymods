@@ -91,6 +91,7 @@ export const translations = {
         discord: "Únete a nuestra comunidad de Discord",
         email: "Soporte por correo",
         social: "Síguenos en redes sociales",
+        instagram: "Contáctame en Instagram",
       },
     },
     // Credits
@@ -230,6 +231,7 @@ export const translations = {
         discord: "Join our Discord community",
         email: "Email support",
         social: "Follow us on social media",
+        instagram: "Contact me on Instagram",
       },
     },
     // Credits

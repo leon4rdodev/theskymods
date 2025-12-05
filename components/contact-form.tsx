@@ -3,7 +3,14 @@
 import type React from "react";
 
 import { useState } from "react";
-import { Send, Mail, MessageCircle, CheckCircle } from "lucide-react";
+import {
+  Send,
+  Mail,
+  MessageCircle,
+  CheckCircle,
+  Instagram,
+  ExternalLink,
+} from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -227,31 +234,47 @@ export function ContactInfo() {
       </h3>
 
       <div className="space-y-6">
-        {/* Discord */}
-        <div className="flex items-start gap-4">
-          <div className="w-10 h-10 bg-[#87CEEB]/20 rounded-xl flex items-center justify-center shrink-0">
-            <MessageCircle className="h-5 w-5 text-[#87CEEB]" />
-          </div>
-          <div>
-            <h4 className="font-medium text-[#2C3E50] mb-1">Discord</h4>
-            <p className="text-sm text-[#5a6a7a]">{t.contact.info.discord}</p>
-            <span className="text-sm text-[#87CEEB] font-medium">
-              discord.gg/skymods
-            </span>
-          </div>
-        </div>
-
         {/* Email */}
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 bg-[#F4D03F]/20 rounded-xl flex items-center justify-center shrink-0">
             <Mail className="h-5 w-5 text-[#F4D03F]" />
           </div>
-          <div>
+          <div className="flex-1">
             <h4 className="font-medium text-[#2C3E50] mb-1">Email</h4>
-            <p className="text-sm text-[#5a6a7a]">{t.contact.info.email}</p>
-            <span className="text-sm text-[#87CEEB] font-medium">
-              support@skymods.app
-            </span>
+            <p className="text-sm text-[#5a6a7a] mb-1">
+              {t.contact.info.email}
+            </p>
+            <a
+              href="mailto:theskymods@gmail.com"
+              className="text-sm text-[#87CEEB] font-medium hover:text-[#98D8C8] transition-colors inline-flex items-center gap-1 cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              theskymods@gmail.com
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
+        </div>
+
+        {/* Instagram */}
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 bg-[#E1306C]/20 rounded-xl flex items-center justify-center shrink-0">
+            <Instagram className="h-5 w-5 text-[#E1306C]" />
+          </div>
+          <div className="flex-1">
+            <h4 className="font-medium text-[#2C3E50] mb-1">Instagram</h4>
+            <p className="text-sm text-[#5a6a7a] mb-1">
+              {t.contact.info.instagram}
+            </p>
+            <a
+              href="https://instagram.com/leon4rdo.dev"
+              className="text-sm text-[#87CEEB] font-medium hover:text-[#98D8C8] transition-colors inline-flex items-center gap-1 cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @leon4rdo.dev
+              <ExternalLink className="h-3 w-3" />
+            </a>
           </div>
         </div>
       </div>

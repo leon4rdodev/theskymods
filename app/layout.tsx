@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LanguageProvider } from "@/contexts/language-context";
 import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
@@ -179,6 +180,7 @@ export default function RootLayout({
           <CookieBanner />
         </LanguageProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

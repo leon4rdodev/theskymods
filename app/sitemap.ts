@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   // Automatically detect the base URL
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.NEXT_PUBLIC_DOMAIN ||
     (process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
       : "http://localhost:3000");

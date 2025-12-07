@@ -15,7 +15,7 @@ export default function Home() {
     name: "Sky Mods - Canvas Modloader",
     description:
       "Descarga Canvas y LibTSM para personalizar Sky: Children of the Light. Modloader ligero sin root, 100% gratis y de código abierto.",
-    url: "https://theskymods.com",
+    url: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com",
     applicationCategory: "GameApplication",
     operatingSystem: "Android",
     offers: {
@@ -31,7 +31,7 @@ export default function Home() {
     author: {
       "@type": "Organization",
       name: "Sky Mods",
-      url: "https://theskymods.com",
+      url: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com",
     },
     softwareVersion: "1.6.7b",
     fileSize: "15MB",

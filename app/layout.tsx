@@ -14,7 +14,9 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://theskymods.com"), // Replace with your actual domain
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com"
+  ),
   title: {
     default:
       "Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
@@ -99,7 +101,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     alternateLocale: ["en_US"],
-    url: "https://theskymods.com",
+    url: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com",
     siteName: "Sky Mods",
     title:
       "Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
@@ -145,7 +147,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="canonical" href="https://theskymods.com" />
+        <link
+          rel="canonical"
+          href={process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com"}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

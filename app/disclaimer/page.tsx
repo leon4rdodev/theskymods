@@ -121,7 +121,7 @@ export default function DisclaimerPage() {
   const currentContent = content[language];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-9">
       <Header />
       <main className="flex-1 bg-linear-to-b from-[#E8F4F8] via-white to-[#F4D03F]/10">
         <div className="container mx-auto px-4 py-16">

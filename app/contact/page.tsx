@@ -10,7 +10,7 @@ function ContactContent() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-20">
+    <section className="pt-26">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-72 h-72 bg-[#87CEEB]/20 rounded-full blur-3xl animate-float" />

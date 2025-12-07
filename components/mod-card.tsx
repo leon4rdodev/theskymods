@@ -10,9 +10,10 @@ import type { Mod } from "@/lib/mods-data";
 interface ModCardProps {
   mod: Mod;
   onDownload: (modId: string) => void;
+  isLoading?: boolean;
 }
 
-export function ModCard({ mod, onDownload }: ModCardProps) {
+export function ModCard({ mod, onDownload, isLoading = false }: ModCardProps) {
   const { language, t } = useLanguage();
 
   const categoryColors: Record<string, string> = {
@@ -59,7 +60,11 @@ export function ModCard({ mod, onDownload }: ModCardProps) {
           </span>
           <span className="flex items-center gap-1">
             <Download className="h-3 w-3" />
-            {mod.downloads.toLocaleString()}
+            {isLoading ? (
+              <span className="inline-block h-3 w-12 bg-gray-200 animate-pulse rounded" />
+            ) : (
+              mod.downloads.toLocaleString()
+            )}
           </span>
         </div>
 

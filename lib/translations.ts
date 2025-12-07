@@ -100,8 +100,10 @@ export const translations = {
       title: "Reconocimientos",
       description:
         "Este sitio distribuye herramientas creadas por desarrolladores talentosos. Todos los créditos van a los creadores originales.",
-      canvas: "Modloader ligero creado por @artdeell y @lukas0x1",
-      libtsm: "Port de Android de That Sky Mod por @XeTrinityz",
+      canvas:
+        "Modloader ligero y extensible que permite cargar plugins personalizados en Sky",
+      libtsm:
+        "Port de Android de That Sky Mod, una biblioteca de modificación completa para el juego",
       repository: "Repositorio Oficial de GitHub",
       repoDescription:
         "Todos los archivos se distribuyen desde el repositorio oficial de ThatskyMod. Este sitio solo proporciona una interfaz amigable para descargarlos.",
@@ -240,8 +242,10 @@ export const translations = {
       title: "Acknowledgments",
       description:
         "This site distributes tools created by talented developers. All credit goes to the original creators.",
-      canvas: "Lightweight modloader created by @artdeell and @lukas0x1",
-      libtsm: "Android port of That Sky Mod by @XeTrinityz",
+      canvas:
+        "Lightweight and extensible modloader that allows loading custom plugins in Sky",
+      libtsm:
+        "Android port of That Sky Mod, a complete modification library for the game",
       repository: "Official GitHub Repository",
       repoDescription:
         "All files are distributed from the official ThatskyMod repository. This site only provides a user-friendly interface to download them.",

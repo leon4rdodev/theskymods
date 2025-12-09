@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Cloud, Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
 export function Footer() {
   const { t } = useLanguage();
+  const pathname = usePathname();
 
   return (
     <footer className="bg-linear-to-b from-transparent to-[#2C3E50]/10 pt-16 pb-8">
@@ -19,7 +21,7 @@ export function Footer() {
             >
               <Cloud className="h-8 w-8 text-[#87CEEB]" />
               <span className="text-xl font-bold bg-linear-to-r from-[#2C3E50] to-[#87CEEB] bg-clip-text text-transparent">
-                Sky Mods
+                The Sky Mods
               </span>
             </Link>
             <p className="text-[#5a6a7a] text-sm leading-relaxed max-w-md">
@@ -36,23 +38,23 @@ export function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-[#5a6a7a] hover:text-[#87CEEB] transition-colors"
+                  className={`text-sm transition-colors cursor-pointer ${
+                    pathname === "/"
+                      ? "text-[#87CEEB] font-semibold"
+                      : "text-[#5a6a7a] hover:text-[#87CEEB]"
+                  }`}
                 >
                   {t.footer.links.home}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#mods"
-                  className="text-sm text-[#5a6a7a] hover:text-[#87CEEB] transition-colors"
-                >
-                  {t.footer.links.mods}
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
-                  className="text-sm text-[#5a6a7a] hover:text-[#87CEEB] transition-colors"
+                  className={`text-sm transition-colors cursor-pointer ${
+                    pathname === "/contact"
+                      ? "text-[#87CEEB] font-semibold"
+                      : "text-[#5a6a7a] hover:text-[#87CEEB]"
+                  }`}
                 >
                   {t.footer.links.contact}
                 </Link>
@@ -69,7 +71,11 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-sm text-[#5a6a7a] hover:text-[#87CEEB] transition-colors"
+                  className={`text-sm transition-colors cursor-pointer ${
+                    pathname === "/privacy"
+                      ? "text-[#87CEEB] font-semibold"
+                      : "text-[#5a6a7a] hover:text-[#87CEEB]"
+                  }`}
                 >
                   {t.footer.legal.privacy}
                 </Link>
@@ -77,7 +83,11 @@ export function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="text-sm text-[#5a6a7a] hover:text-[#87CEEB] transition-colors"
+                  className={`text-sm transition-colors cursor-pointer ${
+                    pathname === "/terms"
+                      ? "text-[#87CEEB] font-semibold"
+                      : "text-[#5a6a7a] hover:text-[#87CEEB]"
+                  }`}
                 >
                   {t.footer.legal.terms}
                 </Link>
@@ -85,7 +95,11 @@ export function Footer() {
               <li>
                 <Link
                   href="/disclaimer"
-                  className="text-sm text-[#5a6a7a] hover:text-[#87CEEB] transition-colors"
+                  className={`text-sm transition-colors cursor-pointer ${
+                    pathname === "/disclaimer"
+                      ? "text-[#87CEEB] font-semibold"
+                      : "text-[#5a6a7a] hover:text-[#87CEEB]"
+                  }`}
                 >
                   {t.footer.legal.disclaimer}
                 </Link>
@@ -98,7 +112,7 @@ export function Footer() {
         <div className="border-t border-[#87CEEB]/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-[#5a6a7a] flex items-center gap-1">
-              © 2025 Sky Mods. {t.footer.copyright}
+              © 2025 The Sky Mods. {t.footer.copyright}
             </p>
             <p className="text-xs text-[#5a6a7a] flex items-center gap-1">
               Made with{" "}

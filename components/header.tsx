@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Globe, Menu, X, Cloud } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,6 +17,43 @@ export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Scroll progress tracking
+  useEffect(() => {
+    const updateScrollProgress = () => {
+      const scrollPx =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      const winHeightPx =
+        (document.documentElement.scrollHeight || document.body.scrollHeight) -
+        (document.documentElement.clientHeight || window.innerHeight);
+
+      if (winHeightPx <= 0) {
+        setScrollProgress(0);
+        return;
+      }
+
+      let scrolled = (scrollPx / winHeightPx) * 100;
+
+      if (winHeightPx - scrollPx <= 5) {
+        scrolled = 100;
+      }
+
+      const progress = Math.min(Math.max(scrolled, 0), 100);
+      setScrollProgress(progress);
+    };
+
+    setTimeout(updateScrollProgress, 100);
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    window.addEventListener("resize", updateScrollProgress, { passive: true });
+    window.addEventListener("orientationchange", updateScrollProgress);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollProgress);
+      window.removeEventListener("resize", updateScrollProgress);
+      window.removeEventListener("orientationchange", updateScrollProgress);
+    };
+  }, []);
 
   const navLinks = [
     { href: "/", label: t.nav.home },
@@ -37,7 +74,7 @@ export function Header() {
               <div className="absolute inset-0 bg-[#F4D03F] blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
             </div>
             <span className="text-xl font-bold bg-linear-to-r from-[#2C3E50] to-[#87CEEB] bg-clip-text text-transparent">
-              Sky Mods
+              The Sky Mods
             </span>
           </Link>
 
@@ -139,6 +176,27 @@ export function Header() {
               </Button>
             </div>
           </nav>
+        </div>
+
+        {/* Scroll Progress Bar */}
+        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-transparent overflow-hidden">
+          <div
+            className="h-full bg-linear-to-r from-[#87CEEB] via-[#F4D03F] to-[#87CEEB] transition-all duration-150 ease-out shadow-lg"
+            style={{
+              width: `${
+                scrollProgress >= 99 ? 100 : Math.min(scrollProgress * 1.1, 100)
+              }%`,
+              boxShadow:
+                "0 0 10px rgba(135, 206, 235, 0.6), 0 0 20px rgba(244, 208, 63, 0.4)",
+            }}
+          >
+            <div
+              className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent animate-shimmer"
+              style={{
+                animation: "shimmer 2s infinite",
+              }}
+            />
+          </div>
         </div>
       </div>
     </header>

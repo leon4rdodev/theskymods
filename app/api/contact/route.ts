@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
       from: process.env.CONTACT_EMAIL,
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
-      subject: `[Sky Mods Contact] ${subject}`,
+      subject: `[The Sky Mods Contact] ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #87CEEB;">New Contact Message</h2>
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
           <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;" />
           
           <p style="color: #666; font-size: 12px;">
-            This message was sent from the Sky Mods contact form
+            This message was sent from the The Sky Mods contact form
           </p>
         </div>
       `,
@@ -68,14 +68,14 @@ export async function POST(request: NextRequest) {
     const confirmationMailOptions = {
       from: process.env.CONTACT_EMAIL,
       to: email,
-      subject: "Thank you for contacting Sky Mods",
+      subject: "Thank you for contacting The Sky Mods",
       html: `
         <!DOCTYPE html>
         <html lang="en">
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Contact Confirmation - Sky Mods</title>
+          <title>Contact Confirmation - The Sky Mods</title>
         </head>
         <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: linear-gradient(135deg, #E8F4F8 0%, #ffffff 100%);">
           <table role="presentation" style="width: 100%; border-collapse: collapse; padding: 40px 20px;">
@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
                       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 16px;">
                         <path d="M6.5 19.5C4.567 19.5 3 17.933 3 16C3 14.067 4.567 12.5 6.5 12.5C6.804 12.5 7.098 12.54 7.377 12.615C7.131 11.802 7 10.935 7 10C7 5.582 10.582 2 15 2C19.418 2 23 5.582 23 10C23 10.711 22.919 11.403 22.767 12.07C24.128 12.533 25 13.875 25 15.5C25 17.433 23.433 19 21.5 19H6.5Z" fill="white" fill-opacity="0.95"/>
                       </svg>
-                      <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Sky Mods</h1>
+                      <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">The Sky Mods</h1>
                       <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase;">Canvas Modloader</p>
                     </td>
                   </tr>
@@ -166,9 +166,9 @@ export async function POST(request: NextRequest) {
                   <!-- Footer -->
                   <tr>
                     <td style="background: #f8fafb; padding: 32px; text-align: center; border-top: 1px solid rgba(135, 206, 235, 0.1);">
-                      <p style="margin: 0 0 8px 0; color: #2C3E50; font-size: 16px; font-weight: 600;">Sky Mods</p>
+                      <p style="margin: 0 0 8px 0; color: #2C3E50; font-size: 16px; font-weight: 600;">The Sky Mods</p>
                       <p style="margin: 0 0 16px 0; color: #5a6a7a; font-size: 12px;">Canvas Modloader & LibTSM for Sky: Children of the Light</p>
-                      <p style="margin: 0 0 20px 0; color: #87CEEB; font-size: 11px;">© ${new Date().getFullYear()} Sky Mods. All rights reserved.</p>
+                      <p style="margin: 0 0 20px 0; color: #87CEEB; font-size: 11px;">© ${new Date().getFullYear()} The Sky Mods. All rights reserved.</p>
                       <div style="padding-top: 20px; border-top: 1px solid rgba(135, 206, 235, 0.1);">
                         <p style="margin: 0; color: #9ca3af; font-size: 11px; line-height: 1.6;">
                           This is an automated confirmation. Please do not reply to this email.<br/>

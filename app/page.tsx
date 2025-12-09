@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/hero-section";
 import { FeaturesSection } from "@/components/features-section";
 import { ModsSection } from "@/components/mods-section";
+import { InstallationSteps } from "@/components/installation-steps";
 import { CreditsSection } from "@/components/credits-section";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Sky Mods - Canvas Modloader",
+    name: "The Sky Mods - Canvas Modloader",
     description:
       "Descarga Canvas y LibTSM para personalizar Sky: Children of the Light. Modloader ligero sin root, 100% gratis y de código abierto.",
     url: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com",
@@ -30,7 +31,7 @@ export default function Home() {
     },
     author: {
       "@type": "Organization",
-      name: "Sky Mods",
+      name: "The Sky Mods",
       url: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com",
     },
     softwareVersion: "1.6.7b",
@@ -39,7 +40,7 @@ export default function Home() {
       "https://raw.githubusercontent.com/thatskymod/Sky-CotL-Scripts/main/Canvas/Canvas.apk",
     genre: "Mod Manager",
     keywords:
-      "Sky Children of the Light mods, Canvas modloader, LibTSM, Sky mods Android, Sky CotL mods",
+      "Sky Children of the Light mods, Canvas modloader, LibTSM, The Sky Mods Android, Sky CotL mods",
   };
 
   return (
@@ -54,6 +55,7 @@ export default function Home() {
           <HeroSection />
           <FeaturesSection />
           <ModsSection />
+          <InstallationSteps />
           <CreditsSection />
         </main>
         <Footer />

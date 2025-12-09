@@ -18,12 +18,12 @@ export default function DisclaimerPage() {
         {
           title: "1. No Afiliación Oficial",
           content:
-            "Sky Mods NO está afiliado, asociado, autorizado, respaldado por, o de ninguna manera conectado oficialmente con thatgamecompany, Inc., o cualquiera de sus subsidiarias o afiliadas. Sky: Children of the Light es una marca registrada de thatgamecompany, Inc.",
+            "The Sky Mods NO está afiliado, asociado, autorizado, respaldado por, o de ninguna manera conectado oficialmente con thatgamecompany, Inc., o cualquiera de sus subsidiarias o afiliadas. Sky: Children of the Light es una marca registrada de thatgamecompany, Inc.",
         },
         {
           title: "2. Uso Bajo Tu Propio Riesgo",
           content:
-            "Todos los mods disponibles en esta plataforma se proporcionan 'tal cual' sin garantías de ningún tipo. El uso de mods puede resultar en la suspensión o prohibición de tu cuenta de Sky: Children of the Light. Sky Mods no se hace responsable de ninguna consecuencia derivada del uso de estos mods.",
+            "Todos los mods disponibles en esta plataforma se proporcionan 'tal cual' sin garantías de ningún tipo. El uso de mods puede resultar en la suspensión o prohibición de tu cuenta de Sky: Children of the Light. The Sky Mods no se hace responsable de ninguna consecuencia derivada del uso de estos mods.",
         },
         {
           title: "3. Violación de Términos de Servicio",
@@ -38,7 +38,7 @@ export default function DisclaimerPage() {
         {
           title: "5. Contenido de Terceros",
           content:
-            "Los mods son creados por desarrolladores de terceros. Sky Mods actúa únicamente como plataforma de distribución y no controla ni garantiza la calidad, seguridad o funcionalidad de los mods publicados.",
+            "Los mods son creados por desarrolladores de terceros. The Sky Mods actúa únicamente como plataforma de distribución y no controla ni garantiza la calidad, seguridad o funcionalidad de los mods publicados.",
         },
         {
           title: "6. Verificación de Seguridad",
@@ -48,7 +48,7 @@ export default function DisclaimerPage() {
         {
           title: "7. Propiedad Intelectual",
           content:
-            "Todos los nombres, marcas, logotipos y materiales relacionados con Sky: Children of the Light son propiedad de thatgamecompany, Inc. Sky Mods no reclama ningún derecho sobre estos materiales.",
+            "Todos los nombres, marcas, logotipos y materiales relacionados con Sky: Children of the Light son propiedad de thatgamecompany, Inc. The Sky Mods no reclama ningún derecho sobre estos materiales.",
         },
         {
           title: "8. Cambios en el Juego",
@@ -58,7 +58,7 @@ export default function DisclaimerPage() {
         {
           title: "9. Responsabilidad Legal",
           content:
-            "Sky Mods y sus operadores no asumen ninguna responsabilidad legal por cualquier daño directo, indirecto, incidental, especial o consecuente que surja del uso o la incapacidad de usar nuestro servicio o los mods descargados.",
+            "The Sky Mods y sus operadores no asumen ninguna responsabilidad legal por cualquier daño directo, indirecto, incidental, especial o consecuente que surja del uso o la incapacidad de usar nuestro servicio o los mods descargados.",
         },
       ],
       backButton: "Volver al inicio",
@@ -71,12 +71,12 @@ export default function DisclaimerPage() {
         {
           title: "1. No Official Affiliation",
           content:
-            "Sky Mods is NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with thatgamecompany, Inc., or any of its subsidiaries or affiliates. Sky: Children of the Light is a registered trademark of thatgamecompany, Inc.",
+            "The Sky Mods is NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with thatgamecompany, Inc., or any of its subsidiaries or affiliates. Sky: Children of the Light is a registered trademark of thatgamecompany, Inc.",
         },
         {
           title: "2. Use at Your Own Risk",
           content:
-            "All mods available on this platform are provided 'as is' without warranties of any kind. Using mods may result in the suspension or ban of your Sky: Children of the Light account. Sky Mods is not responsible for any consequences arising from the use of these mods.",
+            "All mods available on this platform are provided 'as is' without warranties of any kind. Using mods may result in the suspension or ban of your Sky: Children of the Light account. The Sky Mods is not responsible for any consequences arising from the use of these mods.",
         },
         {
           title: "3. Terms of Service Violation",
@@ -91,7 +91,7 @@ export default function DisclaimerPage() {
         {
           title: "5. Third-Party Content",
           content:
-            "Mods are created by third-party developers. Sky Mods acts solely as a distribution platform and does not control or guarantee the quality, security, or functionality of published mods.",
+            "Mods are created by third-party developers. The Sky Mods acts solely as a distribution platform and does not control or guarantee the quality, security, or functionality of published mods.",
         },
         {
           title: "6. Security Verification",
@@ -101,7 +101,7 @@ export default function DisclaimerPage() {
         {
           title: "7. Intellectual Property",
           content:
-            "All names, trademarks, logos, and materials related to Sky: Children of the Light are property of thatgamecompany, Inc. Sky Mods does not claim any rights to these materials.",
+            "All names, trademarks, logos, and materials related to Sky: Children of the Light are property of thatgamecompany, Inc. The Sky Mods does not claim any rights to these materials.",
         },
         {
           title: "8. Game Changes",
@@ -111,7 +111,7 @@ export default function DisclaimerPage() {
         {
           title: "9. Legal Liability",
           content:
-            "Sky Mods and its operators assume no legal liability for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use our service or downloaded mods.",
+            "The Sky Mods and its operators assume no legal liability for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use our service or downloaded mods.",
         },
       ],
       backButton: "Back to home",

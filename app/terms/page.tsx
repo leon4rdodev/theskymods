@@ -17,7 +17,7 @@ export default function TermsPage() {
         {
           title: "1. Aceptación de los Términos",
           content:
-            "Al acceder y utilizar Sky Mods, aceptas estar sujeto a estos términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro servicio.",
+            "Al acceder y utilizar The Sky Mods, aceptas estar sujeto a estos términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro servicio.",
         },
         {
           title: "2. Uso de los Mods",
@@ -27,12 +27,12 @@ export default function TermsPage() {
         {
           title: "3. Responsabilidad del Usuario",
           content:
-            "Tú eres responsable del uso que hagas de los mods descargados. Sky Mods no se hace responsable de ningún daño a tu cuenta, dispositivo o experiencia de juego que pueda resultar del uso de los mods.",
+            "Tú eres responsable del uso que hagas de los mods descargados. The Sky Mods no se hace responsable de ningún daño a tu cuenta, dispositivo o experiencia de juego que pueda resultar del uso de los mods.",
         },
         {
           title: "4. Derechos de Autor",
           content:
-            "Todos los mods están sujetos a los derechos de autor de sus respectivos creadores. Sky Mods actúa únicamente como plataforma de distribución. Los autores de los mods retienen todos los derechos sobre su trabajo.",
+            "Todos los mods están sujetos a los derechos de autor de sus respectivos creadores. The Sky Mods actúa únicamente como plataforma de distribución. Los autores de los mods retienen todos los derechos sobre su trabajo.",
         },
         {
           title: "5. Contenido Prohibido",
@@ -64,7 +64,7 @@ export default function TermsPage() {
         {
           title: "1. Acceptance of Terms",
           content:
-            "By accessing and using Sky Mods, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, you should not use our service.",
+            "By accessing and using The Sky Mods, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, you should not use our service.",
         },
         {
           title: "2. Use of Mods",
@@ -74,12 +74,12 @@ export default function TermsPage() {
         {
           title: "3. User Responsibility",
           content:
-            "You are responsible for your use of downloaded mods. Sky Mods is not liable for any damage to your account, device, or gaming experience that may result from using the mods.",
+            "You are responsible for your use of downloaded mods. The Sky Mods is not liable for any damage to your account, device, or gaming experience that may result from using the mods.",
         },
         {
           title: "4. Copyright",
           content:
-            "All mods are subject to the copyright of their respective creators. Sky Mods acts solely as a distribution platform. Mod authors retain all rights to their work.",
+            "All mods are subject to the copyright of their respective creators. The Sky Mods acts solely as a distribution platform. Mod authors retain all rights to their work.",
         },
         {
           title: "5. Prohibited Content",

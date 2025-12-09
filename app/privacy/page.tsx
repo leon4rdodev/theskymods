@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         {
           title: "1. Información que Recopilamos",
           content:
-            "Sky Mods no recopila información personal identificable. Nuestro sitio web funciona principalmente como una plataforma de distribución de mods. No almacenamos datos de usuarios, correos electrónicos o información de contacto de manera permanente.",
+            "The Sky Mods no recopila información personal identificable. Nuestro sitio web funciona principalmente como una plataforma de distribución de mods. No almacenamos datos de usuarios, correos electrónicos o información de contacto de manera permanente.",
         },
         {
           title: "2. Cookies y Tecnologías de Seguimiento",
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
         {
           title: "1. Information We Collect",
           content:
-            "Sky Mods does not collect personally identifiable information. Our website primarily functions as a mod distribution platform. We do not permanently store user data, emails, or contact information.",
+            "The Sky Mods does not collect personally identifiable information. Our website primarily functions as a mod distribution platform. We do not permanently store user data, emails, or contact information.",
         },
         {
           title: "2. Cookies and Tracking Technologies",

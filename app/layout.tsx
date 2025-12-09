@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   ),
   title: {
     default:
-      "Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
-    template: "%s | Sky Mods",
+      "The Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
+    template: "%s | The Sky Mods",
   },
   description:
     "Descarga Canvas Modloader y LibTSM para Sky: Children of the Light. Mods, hacks y personalización sin root. 100% gratis, código abierto y seguro. Compatible con Android.",
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
 
     // Español - Búsquedas específicas
     "como modificar sky children of the light",
-    "sky mods android",
-    "sky mods sin root",
+    "The Sky Mods android",
+    "The Sky Mods sin root",
     "descargar mods sky",
     "sky hacks android",
     "sky children hacks",
     "modificar sky android",
     "personalizar sky children",
     "trucos sky niños de la luz",
-    "sky mods gratis",
+    "The Sky Mods gratis",
     "sky modloader",
 
     // English - Main terms
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "libtsm download",
     "sky children hacks",
     "sky cotl cheats",
-    "sky mods no root",
+    "The Sky Mods no root",
     "sky android mods",
     "that sky mod android",
 
@@ -79,13 +79,13 @@ export const metadata: Metadata = {
     "sky cotl mod tutorial",
     "descargar canvas sky",
     "descargar libtsm",
-    "sky mods 2024",
-    "sky mods 2025",
+    "The Sky Mods 2024",
+    "The Sky Mods 2025",
     "mejores mods para sky",
   ],
-  authors: [{ name: "Sky Mods Community" }],
-  creator: "Sky Mods",
-  publisher: "Sky Mods",
+  authors: [{ name: "The Sky Mods Community" }],
+  creator: "The Sky Mods",
+  publisher: "The Sky Mods",
   robots: {
     index: true,
     follow: true,
@@ -102,9 +102,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     alternateLocale: ["en_US"],
     url: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.com",
-    siteName: "Sky Mods",
+    siteName: "The Sky Mods",
     title:
-      "Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
+      "The Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
     description:
       "Descarga Canvas Modloader y LibTSM para personalizar Sky: Children of the Light. Mods y hacks sin root, 100% gratis y seguro para Android.",
     images: [
@@ -112,13 +112,13 @@ export const metadata: Metadata = {
         url: "/og-image.png", // You should create this image
         width: 1200,
         height: 630,
-        alt: "Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
+        alt: "The Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sky Mods - Canvas & LibTSM para Sky: Children of the Light",
+    title: "The Sky Mods - Canvas & LibTSM para Sky: Children of the Light",
     description:
       "Descarga Canvas Modloader y LibTSM. Mods sin root para Sky: Children of the Light. Gratis y seguro.",
     images: ["/og-image.png"], // Same as OG image
@@ -168,12 +168,12 @@ export default function RootLayout({
               description:
                 "Modloader para Sky: Children of the Light. Personaliza el juego con mods sin root, 100% gratis y seguro.",
               keywords:
-                "sky mods, sky children mods, canvas modloader, libtsm, sky hacks, sky niños de la luz mods",
+                "The Sky Mods, sky children mods, canvas modloader, libtsm, sky hacks, sky niños de la luz mods",
               inLanguage: ["es", "en"],
               isAccessibleForFree: true,
               publisher: {
                 "@type": "Organization",
-                name: "Sky Mods Community",
+                name: "The Sky Mods Community",
               },
             }),
           }}

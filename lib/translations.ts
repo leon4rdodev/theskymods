@@ -114,6 +114,111 @@ export const translations = {
           "Este proyecto existe gracias al apoyo y la pasión de nuestra increíble comunidad. Cada descarga, cada comentario y cada sugerencia nos impulsa a seguir mejorando.",
       },
     },
+    // Tutorial
+    tutorial: {
+      title: "Cómo Instalar Canvas",
+      subtitle:
+        "Guía completa paso a paso para instalar Canvas y comenzar a usar mods en Sky: Children of the Light",
+      videoTitle: "Video Tutorial",
+      videoDescription:
+        "Mira este video tutorial para una guía visual de instalación",
+      prerequisites: {
+        title: "Requisitos Previos",
+        android: "Android 5.0 o superior",
+        storage: "Al menos 100 MB de espacio libre",
+        sky: "Sky: Children of the Light instalado",
+        sources: "Permitir instalación de fuentes desconocidas",
+      },
+      steps: {
+        title: "Pasos de Instalación",
+        step1: {
+          title: "Descargar Canvas APK",
+          description:
+            "Descarga la última versión de Canvas desde la página principal. El archivo APK se guardará en tu carpeta de Descargas.",
+        },
+        step2: {
+          title: "Habilitar Fuentes Desconocidas",
+          description:
+            "Ve a Configuración → Seguridad → Habilita 'Fuentes desconocidas' o 'Instalar aplicaciones desconocidas' para tu navegador.",
+        },
+        step3: {
+          title: "Instalar Canvas",
+          description:
+            "Abre el archivo APK descargado y sigue las instrucciones en pantalla para instalar Canvas en tu dispositivo.",
+        },
+        step4: {
+          title: "Descargar LibTSM",
+          description:
+            "Descarga LibTSM desde la página principal. Este es el mod principal que agregarás a Canvas.",
+        },
+        step5: {
+          title: "Abrir Canvas y Agregar Mods",
+          description:
+            "Abre Canvas y toca el botón 'Agregar Mod' (+) para importar el archivo LibTSM que descargaste. Selecciona los mods que deseas activar.",
+        },
+        step6: {
+          title: "Iniciar el Juego",
+          description:
+            "Toca el botón 'Live' en Canvas para abrir Sky: Children of the Light con los mods activados. ¡Disfruta de tu experiencia personalizada!",
+        },
+      },
+      troubleshooting: {
+        title: "Solución de Problemas",
+        issue1: {
+          title: "No puedo instalar el APK",
+          solution:
+            "Asegúrate de haber habilitado 'Fuentes desconocidas' en la configuración de tu dispositivo. Si el problema persiste, intenta descargar el archivo nuevamente.",
+        },
+        issue2: {
+          title: "Canvas no inicia Sky",
+          solution:
+            "Verifica que tienes la versión más reciente de Sky instalada. Intenta desinstalar y reinstalar Canvas si el problema continúa.",
+        },
+        issue3: {
+          title: "Los mods no se cargan",
+          solution:
+            "Asegúrate de que los archivos de mods estén en la carpeta correcta. Revisa que LibTSM esté instalado si estás usando mods que lo requieren.",
+        },
+        issue4: {
+          title: "El juego se cierra inesperadamente",
+          solution:
+            "Algunos mods pueden no ser compatibles entre sí. Intenta desactivar los mods uno por uno para identificar cuál causa el problema.",
+        },
+      },
+      faq: {
+        title: "Preguntas Frecuentes",
+        q1: {
+          question: "¿Es seguro usar Canvas?",
+          answer:
+            "Canvas es de código abierto y no requiere root. Sin embargo, usar mods puede violar los términos de servicio del juego. Úsalo bajo tu propio riesgo.",
+        },
+        q2: {
+          question: "¿Me pueden banear por usar Canvas?",
+          answer:
+            "Existe riesgo de baneo al usar cualquier modificación del juego. Recomendamos usar mods de manera responsable y no abusar de ellos en el juego.",
+        },
+        q3: {
+          question: "¿Canvas funciona en iOS?",
+          answer:
+            "No, Canvas solo está disponible para Android. No hay planes actuales para una versión iOS.",
+        },
+        q4: {
+          question: "¿Cómo actualizo Canvas?",
+          answer:
+            "Descarga la última versión desde nuestro sitio web e instálala sobre la versión anterior. Tus configuraciones y plugins se mantendrán.",
+        },
+        q5: {
+          question: "¿Dónde puedo encontrar más mods?",
+          answer:
+            "Puedes encontrar mods adicionales en la comunidad de Discord y en el repositorio oficial de GitHub. LibTSM incluye muchas funciones integradas.",
+        },
+      },
+      warning: {
+        title: "⚠️ Advertencia Importante",
+        message:
+          "El uso de mods puede resultar en un baneo de tu cuenta. The Sky Mods y los desarrolladores de Canvas no se hacen responsables de cualquier consecuencia derivada del uso de estas herramientas. Usa bajo tu propio riesgo.",
+      },
+    },
     // Footer
     footer: {
       description:
@@ -132,7 +237,7 @@ export const translations = {
         disclaimer: "Descargo",
       },
       copyright: "Todos los derechos reservados.",
-      disclaimer: "Sky Mods no está afiliado con thatgamecompany.",
+      disclaimer: "The Sky Mods no está afiliado con thatgamecompany.",
     },
     // 404 Page
     notFound: {
@@ -256,6 +361,111 @@ export const translations = {
           "This project exists thanks to the support and passion of our incredible community. Every download, every comment, and every suggestion drives us to keep improving.",
       },
     },
+    // Tutorial
+    tutorial: {
+      title: "How to Install Canvas",
+      subtitle:
+        "Complete step-by-step guide to install Canvas and start using mods on Sky: Children of the Light",
+      videoTitle: "Video Tutorial",
+      videoDescription:
+        "Watch this video tutorial for a visual installation guide",
+      prerequisites: {
+        title: "Prerequisites",
+        android: "Android 5.0 or higher",
+        storage: "At least 100 MB of free space",
+        sky: "Sky: Children of the Light installed",
+        sources: "Allow installation from unknown sources",
+      },
+      steps: {
+        title: "Installation Steps",
+        step1: {
+          title: "Download Canvas APK",
+          description:
+            "Download the latest version of Canvas from the main page. The APK file will be saved to your Downloads folder.",
+        },
+        step2: {
+          title: "Enable Unknown Sources",
+          description:
+            "Go to Settings → Security → Enable 'Unknown sources' or 'Install unknown apps' for your browser.",
+        },
+        step3: {
+          title: "Install Canvas",
+          description:
+            "Open the downloaded APK file and follow the on-screen instructions to install Canvas on your device.",
+        },
+        step4: {
+          title: "Download LibTSM",
+          description:
+            "Download LibTSM from the main page. This is the main mod you'll add to Canvas.",
+        },
+        step5: {
+          title: "Open Canvas and Add Mods",
+          description:
+            "Open Canvas and tap the 'Add Mod' button (+) to import the LibTSM file you downloaded. Select the mods you want to activate.",
+        },
+        step6: {
+          title: "Launch the Game",
+          description:
+            "Tap the 'Live' button in Canvas to open Sky: Children of the Light with the activated mods. Enjoy your customized experience!",
+        },
+      },
+      troubleshooting: {
+        title: "Troubleshooting",
+        issue1: {
+          title: "Can't install APK",
+          solution:
+            "Make sure you've enabled 'Unknown sources' in your device settings. If the problem persists, try downloading the file again.",
+        },
+        issue2: {
+          title: "Canvas won't launch Sky",
+          solution:
+            "Verify that you have the latest version of Sky installed. Try uninstalling and reinstalling Canvas if the problem continues.",
+        },
+        issue3: {
+          title: "Mods won't load",
+          solution:
+            "Make sure mod files are in the correct folder. Check that LibTSM is installed if you're using mods that require it.",
+        },
+        issue4: {
+          title: "Game crashes unexpectedly",
+          solution:
+            "Some mods may not be compatible with each other. Try disabling mods one by one to identify which one is causing the issue.",
+        },
+      },
+      faq: {
+        title: "Frequently Asked Questions",
+        q1: {
+          question: "Is Canvas safe to use?",
+          answer:
+            "Canvas is open source and doesn't require root. However, using mods may violate the game's terms of service. Use at your own risk.",
+        },
+        q2: {
+          question: "Can I get banned for using Canvas?",
+          answer:
+            "There is a risk of being banned when using any game modification. We recommend using mods responsibly and not abusing them in the game.",
+        },
+        q3: {
+          question: "Does Canvas work on iOS?",
+          answer:
+            "No, Canvas is only available for Android. There are no current plans for an iOS version.",
+        },
+        q4: {
+          question: "How do I update Canvas?",
+          answer:
+            "Download the latest version from our website and install it over the old version. Your settings and plugins will be preserved.",
+        },
+        q5: {
+          question: "Where can I find more mods?",
+          answer:
+            "You can find additional mods in the Discord community and the official GitHub repository. LibTSM includes many built-in features.",
+        },
+      },
+      warning: {
+        title: "⚠️ Important Warning",
+        message:
+          "Using mods may result in your account being banned. The Sky Mods and Canvas developers are not responsible for any consequences arising from the use of these tools. Use at your own risk.",
+      },
+    },
     // Footer
     footer: {
       description:
@@ -274,7 +484,7 @@ export const translations = {
         disclaimer: "Disclaimer",
       },
       copyright: "All rights reserved.",
-      disclaimer: "Sky Mods is not affiliated with thatgamecompany.",
+      disclaimer: "The Sky Mods is not affiliated with thatgamecompany.",
     },
     // 404 Page
     notFound: {

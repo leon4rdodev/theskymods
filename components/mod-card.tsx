@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Download, Calendar, Tag } from "lucide-react";
+import { Download, Calendar, Tag, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/language-context";
@@ -25,6 +25,12 @@ export function ModCard({ mod, onDownload, isLoading = false }: ModCardProps) {
   };
 
   const categoryKey = mod.category as keyof typeof t.mods.categories;
+
+  // Parse author names and GitHub links
+  const authorGithubArray = Array.isArray(mod.authorGithub)
+    ? mod.authorGithub
+    : [mod.authorGithub];
+  const authorNames = mod.author.split(" & ");
 
   return (
     <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
@@ -69,10 +75,25 @@ export function ModCard({ mod, onDownload, isLoading = false }: ModCardProps) {
         </div>
 
         {/* Author and Download */}
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-[#5a6a7a]">
-            by <span className="text-[#87CEEB] font-medium">{mod.author}</span>
-          </span>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex flex-col gap-1.5">
+            <span className="text-xs text-[#5a6a7a]">by</span>
+            <div className="flex flex-wrap gap-1">
+              {authorNames.map((name, index) => (
+                <a
+                  key={index}
+                  href={authorGithubArray[index]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 rounded-full bg-[#87CEEB]/20 text-[#2C3E50] hover:bg-[#87CEEB]/40 transition-colors cursor-pointer inline-flex items-center gap-1"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  @{name.trim()}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              ))}
+            </div>
+          </div>
           <Button
             onClick={() => {
               onDownload(mod.id);

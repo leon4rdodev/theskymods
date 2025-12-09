@@ -1,10 +1,10 @@
-# Sky Mods - SEO Optimization Guide
+# The Sky Mods - SEO Optimization Guide
 
 ## ✅ Mejoras Implementadas
 
 ### 1. **Meta Tags Optimizados**
 
-- ✓ 60+ keywords relacionadas con Sky mods, hacks, Canvas, LibTSM
+- ✓ 60+ keywords relacionadas con The Sky Mods, hacks, Canvas, LibTSM
 - ✓ Títulos y descripciones optimizados para búsquedas
 - ✓ Open Graph tags para redes sociales
 - ✓ Twitter Card tags
@@ -31,7 +31,7 @@
 Crea una imagen en `/public/og-image.png` con:
 
 - Dimensiones: 1200x630 px
-- Incluye logo de Sky Mods
+- Incluye logo de The Sky Mods
 - Texto: "Canvas Modloader & LibTSM"
 - Usa los colores de la marca (#87CEEB, #98D8C8)
 
@@ -117,7 +117,7 @@ Tu sitio ya está optimizado con:
 
 Con estas optimizaciones deberías aparecer en búsquedas de:
 
-- ✓ Sky mods
+- ✓ The Sky Mods
 - ✓ Sky hacks
 - ✓ Canvas modloader
 - ✓ LibTSM

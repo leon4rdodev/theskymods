@@ -1,5 +1,9 @@
 import { MetadataRoute } from "next";
 
+// Force dynamic rendering to ensure Google can always fetch the sitemap
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use production domain consistently for SEO
   const baseUrl = "https://skymods.vercel.app";

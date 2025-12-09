@@ -4,18 +4,24 @@ import Image from "next/image";
 import { Download, Calendar, Tag, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useLanguage } from "@/contexts/language-context";
+import type { Locale, Translations } from "@/lib/translations";
 import type { Mod } from "@/lib/mods-data";
 
 interface ModCardProps {
   mod: Mod;
   onDownload: (modId: string) => void;
   isLoading?: boolean;
+  locale: Locale;
+  t: Translations[Locale];
 }
 
-export function ModCard({ mod, onDownload, isLoading = false }: ModCardProps) {
-  const { language, t } = useLanguage();
-
+export function ModCard({
+  mod,
+  onDownload,
+  isLoading = false,
+  locale,
+  t,
+}: ModCardProps) {
   const categoryColors: Record<string, string> = {
     ui: "bg-[#87CEEB]/20 text-[#2C3E50] border-[#87CEEB]/40",
     gameplay: "bg-[#98D8C8]/20 text-[#2C3E50] border-[#98D8C8]/40",
@@ -38,7 +44,7 @@ export function ModCard({ mod, onDownload, isLoading = false }: ModCardProps) {
       <div className="relative h-40 overflow-hidden">
         <Image
           src={mod.image || "/placeholder.svg"}
-          alt={mod.name[language]}
+          alt={mod.name[locale]}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -48,10 +54,10 @@ export function ModCard({ mod, onDownload, isLoading = false }: ModCardProps) {
       {/* Content */}
       <div className="p-5">
         <h3 className="font-bold text-lg text-[#2C3E50] mb-2 line-clamp-1">
-          {mod.name[language]}
+          {mod.name[locale]}
         </h3>
         <p className="text-sm text-[#5a6a7a] mb-4 line-clamp-2 leading-relaxed">
-          {mod.description[language]}
+          {mod.description[locale]}
         </p>
 
         {/* Meta info */}

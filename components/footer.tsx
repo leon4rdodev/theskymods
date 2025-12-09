@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Cloud, Heart } from "lucide-react";
-import { useLanguage } from "@/contexts/language-context";
+import type { Translations } from "@/lib/translations";
 
-export function Footer() {
-  const { t } = useLanguage();
+export function Footer({ t }: { t: Translations["es"] | Translations["en"] }) {
   const pathname = usePathname();
+  // Extract locale from pathname (e.g., /es/contact -> es)
+  const locale = pathname.split("/")[1] || "es";
 
   return (
     <footer className="bg-linear-to-b from-transparent to-[#2C3E50]/10 pt-16 pb-8">
@@ -16,7 +17,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="flex items-center gap-2 mb-4 cursor-pointer"
             >
               <Cloud className="h-8 w-8 text-[#87CEEB]" />
@@ -37,9 +38,9 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/"
+                  href={`/${locale}`}
                   className={`text-sm transition-colors cursor-pointer ${
-                    pathname === "/"
+                    pathname === `/${locale}`
                       ? "text-[#87CEEB] font-semibold"
                       : "text-[#5a6a7a] hover:text-[#87CEEB]"
                   }`}
@@ -49,9 +50,9 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href={`/${locale}/contact`}
                   className={`text-sm transition-colors cursor-pointer ${
-                    pathname === "/contact"
+                    pathname === `/${locale}/contact`
                       ? "text-[#87CEEB] font-semibold"
                       : "text-[#5a6a7a] hover:text-[#87CEEB]"
                   }`}
@@ -70,9 +71,9 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/privacy"
+                  href={`/${locale}/privacy`}
                   className={`text-sm transition-colors cursor-pointer ${
-                    pathname === "/privacy"
+                    pathname === `/${locale}/privacy`
                       ? "text-[#87CEEB] font-semibold"
                       : "text-[#5a6a7a] hover:text-[#87CEEB]"
                   }`}
@@ -82,9 +83,9 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href={`/${locale}/terms`}
                   className={`text-sm transition-colors cursor-pointer ${
-                    pathname === "/terms"
+                    pathname === `/${locale}/terms`
                       ? "text-[#87CEEB] font-semibold"
                       : "text-[#5a6a7a] hover:text-[#87CEEB]"
                   }`}
@@ -94,9 +95,9 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/disclaimer"
+                  href={`/${locale}/disclaimer`}
                   className={`text-sm transition-colors cursor-pointer ${
-                    pathname === "/disclaimer"
+                    pathname === `/${locale}/disclaimer`
                       ? "text-[#87CEEB] font-semibold"
                       : "text-[#5a6a7a] hover:text-[#87CEEB]"
                   }`}

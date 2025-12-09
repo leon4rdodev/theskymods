@@ -1,14 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { X, Cookie } from "lucide-react";
-import { useLanguage } from "@/contexts/language-context";
+import type { Locale } from "@/lib/translations";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "lucide-react";
 
-export function CookieBanner() {
+export function CookieBanner({ locale }: { locale: Locale }) {
   const [showBanner, setShowBanner] = useState(false);
-  const { language } = useLanguage();
+  const pathname = usePathname();
 
   useEffect(() => {
     // Check if user has already accepted cookies
@@ -49,7 +50,7 @@ export function CookieBanner() {
     },
   };
 
-  const text = content[language];
+  const text = content[locale];
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-in slide-in-from-bottom-5">
@@ -65,12 +66,12 @@ export function CookieBanner() {
               </h3>
               <p className="text-sm text-[#5a6a7a] mb-4">
                 {text.message}{" "}
-                <Link
-                  href="/privacy"
+                <a
+                  href={`/${locale}/privacy`}
                   className="text-[#87CEEB] hover:underline font-medium"
                 >
                   {text.privacy}
-                </Link>
+                </a>
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button

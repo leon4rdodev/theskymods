@@ -1,11 +1,13 @@
 "use client";
 
 import { Heart, Github, Code2, ExternalLink } from "lucide-react";
-import { useLanguage } from "@/contexts/language-context";
+import type { Translations } from "@/lib/translations";
 
-export function CreditsSection() {
-  const { t } = useLanguage();
-
+export function CreditsSection({
+  t,
+}: {
+  t: Translations["es"] | Translations["en"];
+}) {
   return (
     <section className="py-20 bg-linear-to-b from-white to-[#E8F4F8]/30">
       <div className="container mx-auto px-4">

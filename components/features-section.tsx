@@ -1,11 +1,13 @@
 "use client";
 
 import { Shield, Zap, Heart, Download } from "lucide-react";
-import { useLanguage } from "@/contexts/language-context";
+import type { Translations } from "@/lib/translations";
 
-export function FeaturesSection() {
-  const { t } = useLanguage();
-
+export function FeaturesSection({
+  t,
+}: {
+  t: Translations["es"] | Translations["en"];
+}) {
   const features = [
     {
       icon: Shield,

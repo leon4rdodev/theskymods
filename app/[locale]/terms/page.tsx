@@ -1,13 +1,16 @@
-"use client";
-
-import { useLanguage } from "@/contexts/language-context";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { getTranslations, type Locale } from "@/lib/translations";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-export default function TermsPage() {
-  const { language } = useLanguage();
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const t = getTranslations(locale);
 
   const content = {
     es: {
@@ -106,11 +109,11 @@ export default function TermsPage() {
     },
   };
 
-  const currentContent = content[language];
+  const currentContent = content[locale];
 
   return (
     <div className="min-h-screen flex flex-col pt-9">
-      <Header />
+      <Header locale={locale} t={t} />
       <main className="flex-1 bg-linear-to-b from-[#E8F4F8] via-white to-[#F4D03F]/10">
         <div className="container mx-auto px-4 py-16">
           <Link
@@ -142,7 +145,7 @@ export default function TermsPage() {
           </article>
         </div>
       </main>
-      <Footer />
+      <Footer t={t} />
     </div>
   );
 }

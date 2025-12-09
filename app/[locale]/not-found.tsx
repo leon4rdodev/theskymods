@@ -1,18 +1,21 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Cloud, Home } from "lucide-react";
-import { useLanguage } from "@/contexts/language-context";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import { getTranslations } from "@/lib/translations";
 
 export default function NotFound() {
-  const { t } = useLanguage();
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1] || "es";
+  const t = getTranslations(locale as "es" | "en");
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header locale={locale as "es" | "en"} t={t} />
       <main className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="max-w-2xl mx-auto text-center">
           {/* Animated Cloud Icon */}
@@ -39,7 +42,7 @@ export default function NotFound() {
           </div>
 
           {/* Back to Home Button */}
-          <Link href="/">
+          <Link href={`/${locale}`}>
             <Button
               size="lg"
               className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-semibold px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 glow cursor-pointer"
@@ -57,7 +60,7 @@ export default function NotFound() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer t={t} />
     </div>
   );
 }

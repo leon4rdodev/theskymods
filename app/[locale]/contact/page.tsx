@@ -1,14 +1,9 @@
-"use client"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { ContactForm, ContactInfo } from "@/components/contact-form";
+import { getTranslations, type Locale } from "@/lib/translations";
 
-import { LanguageProvider } from "@/contexts/language-context"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { ContactForm, ContactInfo } from "@/components/contact-form"
-import { useLanguage } from "@/contexts/language-context"
-
-function ContactContent() {
-  const { t } = useLanguage()
-
+function ContactContent({ t }: { t: ReturnType<typeof getTranslations> }) {
   return (
     <section className="pt-26">
       {/* Background decorations */}
@@ -28,33 +23,40 @@ function ContactContent() {
               {t.contact.title}
             </span>
           </h1>
-          <p className="text-[#5a6a7a] max-w-xl mx-auto text-lg">{t.contact.subtitle}</p>
+          <p className="text-[#5a6a7a] max-w-xl mx-auto text-lg">
+            {t.contact.subtitle}
+          </p>
         </div>
 
         {/* Form and Info Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="lg:col-span-2">
-            <ContactForm />
+            <ContactForm t={t} />
           </div>
           <div>
-            <ContactInfo />
+            <ContactInfo t={t} />
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const t = getTranslations(locale);
+
   return (
-    <LanguageProvider>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1 relative">
-          <ContactContent />
-        </main>
-        <Footer />
-      </div>
-    </LanguageProvider>
-  )
+    <div className="min-h-screen flex flex-col">
+      <Header locale={locale} t={t} />
+      <main className="flex-1 relative">
+        <ContactContent t={t} />
+      </main>
+      <Footer t={t} />
+    </div>
+  );
 }

@@ -2,11 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { ModCard } from "@/components/mod-card";
-import { useLanguage } from "@/contexts/language-context";
+import type { Locale, Translations } from "@/lib/translations";
 import { modsData, type Mod } from "@/lib/mods-data";
 
-export function ModsSection() {
-  const { language, t } = useLanguage();
+interface ModsSectionProps {
+  locale: Locale;
+  t: Translations[Locale];
+}
+
+export function ModsSection({ locale, t }: ModsSectionProps) {
   const [mods, setMods] = useState<Mod[]>(modsData);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -80,6 +84,8 @@ export function ModsSection() {
               mod={mod}
               onDownload={handleDownload}
               isLoading={isLoading}
+              locale={locale}
+              t={t}
             />
           ))}
         </div>

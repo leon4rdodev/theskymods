@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/language-context";
+import type { Translations } from "@/lib/translations";
 
 interface FormData {
   name: string;
@@ -30,8 +30,11 @@ interface FormErrors {
   message?: string;
 }
 
-export function ContactForm() {
-  const { t } = useLanguage();
+interface ContactFormProps {
+  t: Translations["es"] | Translations["en"];
+}
+
+export function ContactForm({ t }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -224,9 +227,7 @@ export function ContactForm() {
   );
 }
 
-export function ContactInfo() {
-  const { t } = useLanguage();
-
+export function ContactInfo({ t }: ContactFormProps) {
   return (
     <div className="glass-card rounded-2xl p-8">
       <h3 className="text-xl font-bold text-[#2C3E50] mb-6">

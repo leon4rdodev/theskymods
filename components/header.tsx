@@ -2,19 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Globe, Menu, X, Cloud } from "lucide-react";
+import { Menu, X, Cloud } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/contexts/language-context";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import type { Locale, Translations } from "@/lib/translations";
 
-export function Header() {
-  const { language, setLanguage, t } = useLanguage();
+interface HeaderProps {
+  locale: Locale;
+  t: Translations[Locale];
+}
+
+export function Header({ locale, t }: HeaderProps) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -56,8 +54,8 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: t.nav.home },
-    { href: "/contact", label: t.nav.contact },
+    { href: `/${locale}`, label: t.nav.home },
+    { href: `/${locale}/contact`, label: t.nav.contact },
   ];
 
   return (
@@ -66,7 +64,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link
-            href="/"
+            href={`/${locale}`}
             className="flex items-center gap-2 group cursor-pointer"
           >
             <div className="relative">
@@ -93,32 +91,7 @@ export function Header() {
             ))}
 
             {/* Language Selector */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="gap-2 text-[#2C3E50] hover:text-[#87CEEB] hover:bg-white/50"
-                >
-                  <Globe className="h-4 w-4" />
-                  <span className="uppercase">{language}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="glass-card">
-                <DropdownMenuItem
-                  onClick={() => setLanguage("es")}
-                  className={language === "es" ? "bg-[#87CEEB]/20" : ""}
-                >
-                  🇪🇸 Español
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setLanguage("en")}
-                  className={language === "en" ? "bg-[#87CEEB]/20" : ""}
-                >
-                  🇺🇸 English
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <LanguageSwitcher currentLocale={locale} />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -153,27 +126,8 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="flex gap-2 pt-2">
-              <Button
-                variant={language === "es" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setLanguage("es")}
-                className={
-                  language === "es" ? "bg-[#87CEEB] text-[#1a2332]" : ""
-                }
-              >
-                🇪🇸 ES
-              </Button>
-              <Button
-                variant={language === "en" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setLanguage("en")}
-                className={
-                  language === "en" ? "bg-[#87CEEB] text-[#1a2332]" : ""
-                }
-              >
-                🇺🇸 EN
-              </Button>
+            <div className="pt-2">
+              <LanguageSwitcher currentLocale={locale} />
             </div>
           </nav>
         </div>

@@ -497,4 +497,10 @@ export const translations = {
 };
 
 export type Language = "es" | "en";
+export type Locale = Language; // Alias for consistency with i18n config
 export type Translations = typeof translations;
+
+// Helper function to get translations for server components
+export function getTranslations(locale: Locale) {
+  return translations[locale] || translations.es;
+}

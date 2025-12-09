@@ -1,10 +1,12 @@
 "use client";
 
-import { useLanguage } from "@/contexts/language-context";
+import type { Translations } from "@/lib/translations";
 
-export function InstallationSteps() {
-  const { t } = useLanguage();
-
+export function InstallationSteps({
+  t,
+}: {
+  t: Translations["es"] | Translations["en"];
+}) {
   return (
     <section id="installation" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">

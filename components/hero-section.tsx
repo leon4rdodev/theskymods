@@ -1,12 +1,14 @@
 "use client";
 
-import { useLanguage } from "@/contexts/language-context";
+import type { Translations } from "@/lib/translations";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 
-export function HeroSection() {
-  const { t } = useLanguage();
-
+export function HeroSection({
+  t,
+}: {
+  t: Translations["es"] | Translations["en"];
+}) {
   const scrollToMods = () => {
     document.getElementById("mods")?.scrollIntoView({ behavior: "smooth" });
   };

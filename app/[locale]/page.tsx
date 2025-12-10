@@ -25,7 +25,7 @@ export default async function Home({
         ? "Descarga Canvas y LibTSM para personalizar Sky: Children of the Light. Modloader ligero sin root, 100% gratis y de código abierto."
         : "Download Canvas and LibTSM to customize Sky: Children of the Light. Lightweight modloader without root, 100% free and open source.",
     url: `${
-      process.env.NEXT_PUBLIC_DOMAIN || "https://skymods.vercel.app"
+      process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu"
     }/${locale}`,
     applicationCategory: "GameApplication",
     operatingSystem: "Android",
@@ -43,7 +43,7 @@ export default async function Home({
       "@type": "Organization",
       name: "The Sky Mods",
       url: `${
-        process.env.NEXT_PUBLIC_DOMAIN || "https://skymods.vercel.app"
+        process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu"
       }/${locale}`,
     },
     softwareVersion: "1.6.7b",

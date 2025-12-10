@@ -3,7 +3,7 @@ import { locales } from "../i18n.config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use production domain consistently for SEO
-  const baseUrl = "https://skymods.vercel.app";
+  const baseUrl = "https://theskymods.eu";
 
   const pages = ["", "/contact", "/terms", "/privacy", "/disclaimer"];
 

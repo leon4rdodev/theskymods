@@ -24,8 +24,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const baseUrl =
-    process.env.NEXT_PUBLIC_DOMAIN || "https://skymods.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu";
   const t = getTranslations(locale);
 
   const titles = {
@@ -178,7 +177,7 @@ export default async function LocaleLayout({
         <link
           rel="canonical"
           href={`${
-            process.env.NEXT_PUBLIC_DOMAIN || "https://skymods.vercel.app"
+            process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu"
           }/${locale}`}
         />
         <script

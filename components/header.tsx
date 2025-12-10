@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Cloud } from "lucide-react";
+import { Menu, X, Cloud, Home, Gamepad2, BookOpen, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import type { Locale, Translations } from "@/lib/translations";
@@ -16,8 +16,9 @@ export function Header({ locale, t }: HeaderProps) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [activeSection, setActiveSection] = useState("home");
 
-  // Scroll progress tracking
+  // Scroll progress tracking and active section detection
   useEffect(() => {
     const updateScrollProgress = () => {
       const scrollPx =
@@ -28,17 +29,31 @@ export function Header({ locale, t }: HeaderProps) {
 
       if (winHeightPx <= 0) {
         setScrollProgress(0);
-        return;
+      } else {
+        let scrolled = (scrollPx / winHeightPx) * 100;
+        if (winHeightPx - scrollPx <= 5) {
+          scrolled = 100;
+        }
+        const progress = Math.min(Math.max(scrolled, 0), 100);
+        setScrollProgress(progress);
       }
 
-      let scrolled = (scrollPx / winHeightPx) * 100;
+      // Active section detection
+      const sections = ["installation", "mods"]; // Reverse order for priority
+      let current = "home";
 
-      if (winHeightPx - scrollPx <= 5) {
-        scrolled = 100;
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If top of section is within reasonable view (e.g. top half of screen)
+          if (rect.top <= 150) {
+            current = section;
+            break; // Found the lowest section that is active
+          }
+        }
       }
-
-      const progress = Math.min(Math.max(scrolled, 0), 100);
-      setScrollProgress(progress);
+      setActiveSection(current);
     };
 
     setTimeout(updateScrollProgress, 100);
@@ -54,9 +69,29 @@ export function Header({ locale, t }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { href: `/${locale}`, label: t.nav.home },
-    { href: `/${locale}/contact`, label: t.nav.contact },
+    { href: `/${locale}`, label: t.nav.home, icon: Home },
+    { href: `/${locale}#mods`, label: t.nav.mods, icon: Gamepad2 },
+    { href: `/${locale}#installation`, label: t.nav.tutorial, icon: BookOpen },
+    { href: `/${locale}/contact`, label: t.nav.contact, icon: Mail },
   ];
+
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    href: string
+  ) => {
+    if (href.includes("#")) {
+      const [path, hash] = href.split("#");
+      if (pathname === path) {
+        e.preventDefault();
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", `#${hash}`);
+        }
+      }
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="fixed w-full top-0 z-50 glass border-b border-white/20 backdrop-blur-md">
@@ -78,17 +113,32 @@ export function Header({ locale, t }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#87CEEB] cursor-pointer ${
-                  pathname === link.href ? "text-[#87CEEB]" : "text-[#2C3E50]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              let isActive = false;
+              if (link.href.includes("#")) {
+                const hash = link.href.split("#")[1];
+                isActive = activeSection === hash;
+              } else if (link.href === `/${locale}`) {
+                isActive =
+                  activeSection === "home" && pathname === `/${locale}`;
+              } else {
+                isActive = pathname === link.href;
+              }
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleScroll(e, link.href)}
+                  className={`text-sm font-medium transition-colors hover:text-[#87CEEB] cursor-pointer flex items-center gap-1.5 ${
+                    isActive ? "text-[#87CEEB]" : "text-[#2C3E50]"
+                  }`}
+                >
+                  <link.icon className="h-4 w-4" />
+                  {link.label}
+                </Link>
+              );
+            })}
 
             {/* Language Selector */}
             <LanguageSwitcher currentLocale={locale} />
@@ -114,18 +164,33 @@ export function Header({ locale, t }: HeaderProps) {
           }`}
         >
           <nav className="flex flex-col gap-4 py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm font-medium transition-colors hover:text-[#87CEEB] cursor-pointer ${
-                  pathname === link.href ? "text-[#87CEEB]" : "text-[#2C3E50]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              let isActive = false;
+              if (link.href.includes("#")) {
+                const hash = link.href.split("#")[1];
+                isActive = activeSection === hash;
+              } else if (link.href === `/${locale}`) {
+                isActive =
+                  activeSection === "home" && pathname === `/${locale}`;
+              } else {
+                isActive = pathname === link.href;
+              }
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleScroll(e, link.href)}
+                  className={`text-sm font-medium transition-colors hover:text-[#87CEEB] cursor-pointer flex items-center gap-3 ${
+                    isActive ? "text-[#87CEEB]" : "text-[#2C3E50]"
+                  }`}
+                >
+                  <link.icon className="h-5 w-5" />
+                  {link.label}
+                </Link>
+              );
+            })}
+
             <div className="pt-2">
               <LanguageSwitcher currentLocale={locale} />
             </div>

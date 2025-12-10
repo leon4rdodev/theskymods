@@ -202,6 +202,7 @@
 /* Ensure no space is reserved for scrollbar */
 html,
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;

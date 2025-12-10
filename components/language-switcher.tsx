@@ -27,25 +27,39 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
     { code: "en" as Locale, name: "English", flag: "🇺🇸" },
   ];
 
+  const currentLang = languages.find((l) => l.code === currentLocale);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="cursor-pointer">
-          <Globe className="h-5 w-5" />
-          <span className="sr-only">Switch language</span>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="cursor-pointer rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-[#2C3E50] px-3 gap-2 transition-all duration-300 hover:scale-105"
+          aria-label="Select language"
+        >
+          <Globe className="h-4 w-4" />
+          <span className="font-medium uppercase">{currentLocale}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent
+        align="end"
+        className="glass-card border-white/40 min-w-[140px] p-1"
+      >
         {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} asChild>
+          <DropdownMenuItem
+            key={lang.code}
+            asChild
+            className={`rounded-lg cursor-pointer focus:bg-[#87CEEB]/20 focus:text-[#2C3E50] ${
+              currentLocale === lang.code ? "bg-[#87CEEB]/10" : ""
+            }`}
+          >
             <Link
               href={`/${lang.code}${pathWithoutLocale}`}
-              className={`cursor-pointer flex items-center gap-2 ${
-                currentLocale === lang.code ? "bg-accent" : ""
-              }`}
+              className="flex items-center gap-3 px-3 py-2 w-full"
             >
-              <span>{lang.flag}</span>
-              <span>{lang.name}</span>
+              <span className="text-lg">{lang.flag}</span>
+              <span className="font-medium text-[#2C3E50]">{lang.name}</span>
             </Link>
           </DropdownMenuItem>
         ))}

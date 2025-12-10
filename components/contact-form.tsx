@@ -209,7 +209,7 @@ export function ContactForm({ t }: ContactFormProps) {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full h-12 bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50"
+        className="w-full h-12 bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer"
       >
         {isSubmitting ? (
           <>

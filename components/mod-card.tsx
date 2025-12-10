@@ -39,7 +39,7 @@ export function ModCard({
   const authorNames = mod.author.split(" & ");
 
   return (
-    <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+    <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
       {/* Image */}
       <div className="relative h-40 overflow-hidden">
         <Image
@@ -52,7 +52,7 @@ export function ModCard({
       </div>
 
       {/* Content */}
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-1">
         <h3 className="font-bold text-lg text-[#2C3E50] mb-2 line-clamp-1">
           {mod.name[locale]}
         </h3>
@@ -81,7 +81,7 @@ export function ModCard({
         </div>
 
         {/* Author and Download */}
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center justify-between gap-4 mt-auto pt-4 border-t border-[#2C3E50]/10">
           <div className="flex flex-col gap-1.5">
             <span className="text-xs text-[#5a6a7a]">by</span>
             <div className="flex flex-wrap gap-1">
@@ -116,7 +116,7 @@ export function ModCard({
               }
             }}
             size="sm"
-            className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-medium hover:opacity-90 transition-opacity"
+            className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-medium hover:opacity-90 transition-opacity cursor-pointer"
           >
             <Download className="h-4 w-4 mr-1" />
             {t.mods.download}

@@ -4,6 +4,8 @@ export const translations = {
     nav: {
       home: "Inicio",
       contact: "Contacto",
+      mods: "Mods",
+      tutorial: "Tutorial",
       language: "Idioma",
     },
     // Hero
@@ -252,6 +254,8 @@ export const translations = {
     nav: {
       home: "Home",
       contact: "Contact",
+      mods: "Mods",
+      tutorial: "Tutorial",
       language: "Language",
     },
     // Hero

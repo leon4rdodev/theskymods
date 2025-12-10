@@ -31,7 +31,7 @@ interface FormErrors {
 }
 
 interface ContactFormProps {
-  t: Translations["es"] | Translations["en"];
+  t: Translations;
 }
 
 export function ContactForm({ t }: ContactFormProps) {
@@ -241,7 +241,9 @@ export function ContactInfo({ t }: ContactFormProps) {
             <Mail className="h-5 w-5 text-[#F4D03F]" />
           </div>
           <div className="flex-1">
-            <h4 className="font-medium text-[#2C3E50] mb-1">Email</h4>
+            <h4 className="font-medium text-[#2C3E50] mb-1">
+              {t.contact.info.emailLabel}
+            </h4>
             <p className="text-sm text-[#5a6a7a] mb-1">
               {t.contact.info.email}
             </p>
@@ -263,7 +265,9 @@ export function ContactInfo({ t }: ContactFormProps) {
             <Instagram className="h-5 w-5 text-[#E1306C]" />
           </div>
           <div className="flex-1">
-            <h4 className="font-medium text-[#2C3E50] mb-1">Instagram</h4>
+            <h4 className="font-medium text-[#2C3E50] mb-1">
+              {t.contact.info.instagramLabel}
+            </h4>
             <p className="text-sm text-[#5a6a7a] mb-1">
               {t.contact.info.instagram}
             </p>

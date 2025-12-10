@@ -7,7 +7,7 @@ import { modsData, type Mod } from "@/lib/mods-data";
 
 interface ModsSectionProps {
   locale: Locale;
-  t: Translations[Locale];
+  t: Translations;
 }
 
 export function ModsSection({ locale, t }: ModsSectionProps) {

@@ -3,11 +3,7 @@
 import { Heart, Github, Code2, ExternalLink } from "lucide-react";
 import type { Translations } from "@/lib/translations";
 
-export function CreditsSection({
-  t,
-}: {
-  t: Translations["es"] | Translations["en"];
-}) {
+export function CreditsSection({ t }: { t: Translations }) {
   return (
     <section className="py-20 bg-linear-to-b from-white to-[#E8F4F8]/30">
       <div className="container mx-auto px-4">

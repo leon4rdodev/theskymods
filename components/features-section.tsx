@@ -3,11 +3,7 @@
 import { Shield, Zap, Heart, Download } from "lucide-react";
 import type { Translations } from "@/lib/translations";
 
-export function FeaturesSection({
-  t,
-}: {
-  t: Translations["es"] | Translations["en"];
-}) {
+export function FeaturesSection({ t }: { t: Translations }) {
   const features = [
     {
       icon: Shield,

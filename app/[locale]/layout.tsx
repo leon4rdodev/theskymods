@@ -6,6 +6,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CookieBanner } from "@/components/cookie-banner";
 import { locales, defaultLocale, type Locale } from "@/i18n.config";
 import { getTranslations } from "@/lib/translations";
+import {
+  languageConfig,
+  getAlternateLocales,
+  getLanguageAlternatives,
+} from "@/lib/language-config";
+import { siteConfig } from "@/lib/site-config";
 import "../globals.css";
 
 const nunito = Nunito({
@@ -24,94 +30,33 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const baseUrl = process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu";
-  const t = getTranslations(locale);
+  const t = await getTranslations(locale);
+  const langConfig = languageConfig[locale];
 
-  const titles = {
-    es: "The Sky Mods - Canvas Modloader & LibTSM para Sky: Children of the Light",
-    en: "The Sky Mods - Canvas Modloader & LibTSM for Sky: Children of the Light",
-  };
-
-  const descriptions = {
-    es: "Descarga Canvas Modloader y LibTSM para Sky: Children of the Light. Mods, hacks y personalización sin root. 100% gratis, código abierto y seguro. Compatible con Android.",
-    en: "Download Canvas Modloader and LibTSM for Sky: Children of the Light. Mods, hacks and customization without root. 100% free, open source and safe. Compatible with Android.",
-  };
+  if (!langConfig) {
+    // Fallback to avoid crash on invalid locales (e.g. static files hitting this route)
+    return {
+      title: "Error",
+      description: "Configuration error",
+    };
+  }
 
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(siteConfig.domain),
     title: {
-      default: titles[locale],
-      template: "%s | The Sky Mods",
+      default: t.metadata.title,
+      template: `%s | ${siteConfig.name}`,
     },
-    description: descriptions[locale],
-    keywords: [
-      // Español - Términos principales
-      "Sky Children of the Light mods",
-      "Sky niños de la luz mods",
-      "Sky niños de la luz hacks",
-      "mods para sky niños de la luz",
-      "canvas modloader",
-      "canvas modloader sky",
-      "canvas apk",
-      "canvas sky download",
-      "LibTSM",
-      "LibTSM sky",
-      "That Sky Mod",
-      "sky cotl mods",
-      "sky cotl hacks",
-
-      // Español - Búsquedas específicas
-      "como modificar sky children of the light",
-      "The Sky Mods android",
-      "The Sky Mods sin root",
-      "descargar mods sky",
-      "sky hacks android",
-      "sky children hacks",
-      "modificar sky android",
-      "personalizar sky children",
-      "trucos sky niños de la luz",
-      "The Sky Mods gratis",
-      "sky modloader",
-
-      // English - Main terms
-      "sky children of the light mods",
-      "sky cotl mods android",
-      "canvas modloader download",
-      "libtsm download",
-      "sky children hacks",
-      "sky cotl cheats",
-      "The Sky Mods no root",
-      "sky android mods",
-      "that sky mod android",
-
-      // Términos técnicos
-      "sky modloader sin root",
-      "sky mod menu",
-      "sky children mod apk",
-      "sky cotl modded apk",
-      "canvas wrapper sky",
-      "sky plugin loader",
-      "sky children tweaks",
-
-      // Búsquedas relacionadas
-      "como instalar mods en sky",
-      "sky children of light modding",
-      "sky cotl mod tutorial",
-      "descargar canvas sky",
-      "descargar libtsm",
-      "The Sky Mods 2024",
-      "The Sky Mods 2025",
-      "mejores mods para sky",
-    ],
-    authors: [{ name: "The Sky Mods Community" }],
-    creator: "The Sky Mods",
-    publisher: "The Sky Mods",
+    description: t.metadata.description,
+    keywords: [...siteConfig.seo.keywords],
+    authors: [{ name: siteConfig.seo.author }],
+    creator: siteConfig.seo.creator,
+    publisher: siteConfig.seo.publisher,
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
+      canonical: `${siteConfig.domain}/${locale}`,
       languages: {
-        es: `${baseUrl}/es`,
-        en: `${baseUrl}/en`,
-        "x-default": `${baseUrl}/${defaultLocale}`,
+        ...getLanguageAlternatives(),
+        "x-default": `${siteConfig.domain}/${defaultLocale}`,
       },
     },
     robots: {
@@ -127,37 +72,43 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-      alternateLocale: locale === "es" ? ["en_US"] : ["es_ES"],
-      url: `${baseUrl}/${locale}`,
-      siteName: "The Sky Mods",
-      title: titles[locale],
-      description: descriptions[locale],
+      locale: langConfig.ogLocale,
+      alternateLocale: getAlternateLocales(locale),
+      url: `${siteConfig.domain}/${locale}`,
+      siteName: siteConfig.name,
+      title: t.metadata.title,
+      description: t.metadata.description,
       images: [
         {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: titles[locale],
+          url: siteConfig.images.ogImage,
+          width: siteConfig.images.ogImageWidth,
+          height: siteConfig.images.ogImageHeight,
+          alt: t.metadata.title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale],
-      description: descriptions[locale],
-      images: ["/og-image.png"],
+      title: t.metadata.title,
+      description: t.metadata.description,
+      images: [siteConfig.images.ogImage],
     },
     icons: {
       icon: [
-        { url: "/favicon.ico", sizes: "any" },
-        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: siteConfig.images.favicon, sizes: "any" },
+        { url: siteConfig.images.icon, type: "image/svg+xml" },
       ],
-      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+      apple: [
+        {
+          url: siteConfig.images.appleIcon,
+          sizes: "180x180",
+          type: "image/png",
+        },
+      ],
     },
     manifest: "/manifest.json",
     verification: {
-      google: "-GLBeiN6eJGBLTtMFeJKw8gSQ5TUbGNn8kkgeP7mUQo",
+      google: siteConfig.seo.googleVerification,
     },
   };
 }
@@ -170,41 +121,34 @@ export default async function LocaleLayout({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
+  const t = await getTranslations(locale);
 
   return (
     <html lang={locale}>
       <head>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu"
-          }/${locale}`}
-        />
+        <link rel="canonical" href={`${siteConfig.domain}/${locale}`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "Canvas Modloader & LibTSM",
-              applicationCategory: "GameApplication",
-              operatingSystem: "Android",
+              name: siteConfig.structuredData.applicationName,
+              applicationCategory:
+                siteConfig.structuredData.applicationCategory,
+              operatingSystem: siteConfig.structuredData.operatingSystem,
               offers: {
                 "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
+                price: siteConfig.structuredData.price,
+                priceCurrency: siteConfig.structuredData.priceCurrency,
               },
-              description:
-                locale === "es"
-                  ? "Modloader para Sky: Children of the Light. Personaliza el juego con mods sin root, 100% gratis y seguro."
-                  : "Modloader for Sky: Children of the Light. Customize the game with mods without root, 100% free and safe.",
-              keywords:
-                "The Sky Mods, sky children mods, canvas modloader, libtsm, sky hacks, sky niños de la luz mods",
+              description: t.metadata.description,
+              keywords: siteConfig.structuredData.keywords,
               inLanguage: [locale],
               isAccessibleForFree: true,
               publisher: {
                 "@type": "Organization",
-                name: "The Sky Mods Community",
+                name: siteConfig.structuredData.publisher,
               },
             }),
           }}

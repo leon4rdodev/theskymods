@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "title": "The Sky Mods - Canvas Modloader & LibTSM untuk Sky: Children of the Light",
+        "description": "Unduh Canvas Modloader dan LibTSM untuk Sky: Children of the Light. Mod, hack, dan kustomisasi tanpa root. 100% gratis, open source, dan aman. Kompatibel dengan Android."
+    },
+    "nav": {
+        "home": "Beranda",
+        "contact": "Kontak",
+        "mods": "Mod",
+        "tutorial": "Tutorial",
+        "language": "Bahasa"
+    },
+    "hero": {
+        "title": "Canvas Modloader untuk Sky",
+        "subtitle": "Unduh Canvas dan LibTSM untuk menyesuaikan pengalaman Sky: Children of the Light Anda di Android tanpa akses root",
+        "cta": "Unduh sekarang"
+    },
+    "mods": {
+        "title": "Unduh Canvas",
+        "subtitle": "Semua yang Anda butuhkan untuk menjalankan mod di Sky: Children of the Light untuk Android",
+        "download": "Unduh",
+        "categories": {
+            "ui": "UI",
+            "gameplay": "Gameplay",
+            "cosmetics": "Kosmetik",
+            "audio": "Audio",
+            "performance": "Performa"
+        },
+        "list": {
+            "canvas": {
+                "name": "Canvas Modloader",
+                "description": "Sky Modloader. Wrapper modular yang bertindak sebagai jembatan untuk plugin tanpa hak akses tinggi"
+            },
+            "libtsm": {
+                "name": "LibTSM",
+                "description": "Port Android dari That Sky Mod. Menu mod terpadu untuk Sky, dirancang untuk Canvas"
+            }
+        }
+    },
+    "features": {
+        "title": "Mengapa Canvas?",
+        "subtitle": "Modloader ringan dan modular untuk Sky: Children of the Light",
+        "safety": {
+            "title": "Tanpa Root",
+            "description": "Canvas tidak memerlukan hak akses tinggi atau keterampilan pemrograman khusus."
+        },
+        "easy": {
+            "title": "Modular",
+            "description": "Muat plugin yang sudah ada atau tulis sendiri. Sistem yang sepenuhnya dapat diperluas."
+        },
+        "free": {
+            "title": "100% Gratis",
+            "description": "Canvas dan LibTSM sepenuhnya gratis dan open source."
+        },
+        "community": {
+            "title": "Ringan",
+            "description": "Hanya sekitar ~15 MB penyimpanan. Terhubung ke Sky saat runtime sebagai jembatan."
+        }
+    },
+    "contact": {
+        "title": "Hubungi Kami",
+        "subtitle": "Ada pertanyaan atau saran? Kami ingin mendengar dari Anda!",
+        "form": {
+            "name": "Nama",
+            "namePlaceholder": "Nama Anda",
+            "email": "Email",
+            "emailPlaceholder": "anda@email.com",
+            "subject": "Subjek",
+            "subjectPlaceholder": "Bagaimana kami bisa membantu Anda?",
+            "message": "Pesan",
+            "messagePlaceholder": "Tulis pesan Anda di sini...",
+            "send": "Kirim Pesan",
+            "sending": "Mengirim..."
+        },
+        "success": "Pesan berhasil dikirim! Kami akan segera menghubungi Anda.",
+        "validation": {
+            "nameRequired": "Nama wajib diisi",
+            "emailRequired": "Email wajib diisi",
+            "emailInvalid": "Masukkan email yang valid",
+            "subjectRequired": "Subjek wajib diisi",
+            "messageRequired": "Pesan wajib diisi"
+        },
+        "info": {
+            "title": "Cara lain untuk menghubungi kami",
+            "email": "Kirim email kepada kami",
+            "emailLabel": "Email",
+            "instagram": "Ikuti kami di Instagram",
+            "instagramLabel": "Instagram"
+        }
+    },
+    "credits": {
+        "badge": "Kredit",
+        "title": "Ucapan Terima Kasih",
+        "description": "Situs ini mendistribusikan alat yang dibuat oleh pengembang berbakat. Semua kredit diberikan kepada pembuat asli.",
+        "canvas": "Modloader ringan dan dapat diperluas yang memungkinkan pemuatan plugin kustom di Sky",
+        "libtsm": "Port Android dari That Sky Mod, perpustakaan modifikasi lengkap untuk game",
+        "repository": "Repositori GitHub Resmi",
+        "repoDescription": "Semua file didistribusikan dari repositori resmi ThatskyMod. Situs ini hanya menyediakan antarmuka yang ramah pengguna untuk mengunduhnya."
+    },
+    "tutorial": {
+        "title": "Cara Menginstal Canvas",
+        "subtitle": "Panduan langkah demi langkah lengkap untuk menginstal Canvas dan mulai menggunakan mod di Sky: Children of the Light",
+        "steps": {
+            "title": "Langkah Instalasi",
+            "step1": {
+                "title": "Unduh Canvas APK",
+                "description": "Unduh versi terbaru Canvas dari halaman utama. File APK akan disimpan di folder Unduhan Anda."
+            },
+            "step2": {
+                "title": "Aktifkan Sumber Tidak Dikenal",
+                "description": "Buka Pengaturan → Keamanan → Aktifkan 'Sumber tidak dikenal' atau 'Instal aplikasi tidak dikenal' untuk browser Anda."
+            },
+            "step3": {
+                "title": "Instal Canvas",
+                "description": "Buka file APK yang diunduh dan ikuti instruksi di layar untuk menginstal Canvas di perangkat Anda."
+            },
+            "step4": {
+                "title": "Unduh LibTSM",
+                "description": "Unduh LibTSM dari halaman utama. Ini adalah mod utama yang akan Anda tambahkan ke Canvas."
+            },
+            "step5": {
+                "title": "Buka Canvas dan Tambahkan Mod",
+                "description": "Buka Canvas dan ketuk tombol 'Tambah Mod' (+) untuk mengimpor file LibTSM yang Anda unduh. Pilih mod yang ingin Anda aktifkan."
+            },
+            "step6": {
+                "title": "Luncurkan Game",
+                "description": "Ketuk tombol 'Live' di Canvas untuk membuka Sky: Children of the Light dengan mod yang diaktifkan. Nikmati pengalaman yang disesuaikan!"
+            }
+        },
+        "faq": {
+            "title": "Pertanyaan yang Sering Diajukan",
+            "q1": {
+                "question": "Apakah Canvas aman digunakan?",
+                "answer": "Canvas adalah open source dan tidak memerlukan root. Namun, menggunakan mod dapat melanggar persyaratan layanan game. Gunakan dengan risiko Anda sendiri."
+            },
+            "q2": {
+                "question": "Bisakah saya diblokir karena menggunakan Canvas?",
+                "answer": "Ada risiko diblokir saat menggunakan modifikasi game apa pun. Kami merekomendasikan menggunakan mod secara bertanggung jawab dan tidak menyalahgunakannya dalam game."
+            },
+            "q3": {
+                "question": "Apakah Canvas berfungsi di iOS?",
+                "answer": "Tidak, Canvas hanya tersedia untuk Android. Tidak ada rencana saat ini untuk versi iOS."
+            },
+            "q4": {
+                "question": "Bagaimana cara memperbarui Canvas?",
+                "answer": "Unduh versi terbaru dari situs web kami dan instal di atas versi lama. Pengaturan dan plugin Anda akan dipertahankan."
+            },
+            "q5": {
+                "question": "Di mana saya dapat menemukan lebih banyak mod?",
+                "answer": "Anda dapat menemukan mod tambahan di komunitas Discord dan repositori GitHub resmi. LibTSM menyertakan banyak fitur bawaan."
+            }
+        }
+    },
+    "footer": {
+        "description": "Sumber terpercaya Anda untuk mod Sky: Children of the Light. Tingkatkan pengalaman bermain game Anda dengan aman.",
+        "links": {
+            "title": "Tautan",
+            "home": "Beranda",
+            "contact": "Kontak"
+        },
+        "legal": {
+            "title": "Hukum",
+            "privacy": "Privasi",
+            "terms": "Ketentuan",
+            "disclaimer": "Penafian"
+        },
+        "copyright": "Semua hak dilindungi.",
+        "disclaimer": "The Sky Mods tidak berafiliasi dengan thatgamecompany."
+    },
+    "notFound": {
+        "title": "Ups! Anda tersesat di awan",
+        "description": "Sepertinya halaman ini telah terbang menuju cakrawala. Jangan khawatir, kami dapat membantu Anda menemukan jalan kembali.",
+        "backHome": "Kembali ke Beranda"
+    },
+    "disclaimer": {
+        "title": "Penafian",
+        "lastUpdated": "Terakhir diperbarui: 5 Desember 2024",
+        "warning": "PENTING: Baca dengan saksama sebelum menggunakan mod apa pun",
+        "sections": [
+            {
+                "title": "1. Tidak Ada Afiliasi Resmi",
+                "content": "The Sky Mods TIDAK berafiliasi, terkait, diotorisasi, didukung oleh, atau dengan cara apa pun secara resmi terhubung dengan thatgamecompany, Inc., atau anak perusahaan atau afiliasinya. Sky: Children of the Light adalah merek dagang terdaftar dari thatgamecompany, Inc."
+            },
+            {
+                "title": "2. Gunakan dengan Risiko Sendiri",
+                "content": "Semua mod yang tersedia di platform ini disediakan 'apa adanya' tanpa jaminan apa pun. Menggunakan mod dapat mengakibatkan penangguhan atau pemblokiran akun Sky: Children of the Light Anda. The Sky Mods tidak bertanggung jawab atas konsekuensi apa pun yang timbul dari penggunaan mod ini."
+            },
+            {
+                "title": "3. Pelanggaran Persyaratan Layanan",
+                "content": "Menggunakan mod dapat melanggar Persyaratan Layanan Sky: Children of the Light. Dengan mengunduh dan menggunakan mod ini, Anda mengakui bahwa Anda menanggung semua risiko terkait, termasuk namun tidak terbatas pada penangguhan atau penghapusan akun."
+            },
+            {
+                "title": "4. Tidak Ada Jaminan",
+                "content": "Kami tidak menjamin bahwa mod akan berfungsi dengan benar, kompatibel dengan perangkat Anda, atau tidak menyebabkan masalah teknis. Kami tidak bertanggung jawab atas kerusakan pada perangkat Anda, kehilangan data, atau kerusakan file game."
+            },
+            {
+                "title": "5. Konten Pihak Ketiga",
+                "content": "Mod dibuat oleh pengembang pihak ketiga. The Sky Mods bertindak semata-mata sebagai platform distribusi dan tidak mengontrol atau menjamin kualitas, keamanan, atau fungsionalitas mod yang dipublikasikan."
+            },
+            {
+                "title": "6. Verifikasi Keamanan",
+                "content": "Meskipun kami melakukan pemeriksaan keamanan dasar, kami tidak dapat menjamin 100% bahwa mod bebas dari malware atau kode berbahaya. Kami merekomendasikan menggunakan perangkat lunak antivirus yang diperbarui dan berhati-hati saat mengunduh file."
+            },
+            {
+                "title": "7. Kekayaan Intelektual",
+                "content": "Semua nama, merek dagang, logo, dan materi yang terkait dengan Sky: Children of the Light adalah milik thatgamecompany, Inc. The Sky Mods tidak mengklaim hak apa pun atas materi ini."
+            },
+            {
+                "title": "8. Perubahan Game",
+                "content": "Mod dapat berhenti bekerja setelah pembaruan game. Kami tidak menjamin pemeliharaan atau pembaruan mod agar kompatibel dengan versi game di masa mendatang."
+            },
+            {
+                "title": "9. Tanggung Jawab Hukum",
+                "content": "The Sky Mods dan operatornya tidak bertanggung jawab secara hukum atas kerusakan langsung, tidak langsung, insidental, khusus, atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan kami atau mod yang diunduh."
+            }
+        ],
+        "backButton": "Kembali ke beranda"
+    },
+    "privacy": {
+        "title": "Kebijakan Privasi",
+        "lastUpdated": "Terakhir diperbarui: 5 Desember 2024",
+        "sections": [
+            {
+                "title": "1. Informasi yang Kami Kumpulkan",
+                "content": "The Sky Mods tidak mengumpulkan informasi yang dapat mengidentifikasi pribadi. Website kami berfungsi utamanya sebagai platform distribusi mod. Kami tidak menyimpan data pengguna, email, atau informasi kontak secara permanen."
+            },
+            {
+                "title": "2. Cookie dan Teknologi Pelacakan",
+                "content": "Kami menggunakan cookie penting untuk fungsionalitas dasar situs, seperti preferensi bahasa. Kami tidak menggunakan cookie pelacakan pihak ketiga atau alat analisis yang membahayakan privasi Anda."
+            },
+            {
+                "title": "3. Unduhan Mod",
+                "content": "Ketika Anda mengunduh mod dari platform kami, kami tidak mencatat alamat IP atau informasi pribadi Anda. Statistik unduhan bersifat anonim dan hanya digunakan untuk menampilkan popularitas mod."
+            },
+            {
+                "title": "4. Formulir Kontak",
+                "content": "Jika Anda menggunakan formulir kontak kami, informasi yang diberikan (nama, email, pesan) hanya digunakan untuk menanggapi pertanyaan Anda dan tidak disimpan dalam database permanen."
+            },
+            {
+                "title": "5. Keamanan",
+                "content": "Semua mod yang tersedia di platform kami diverifikasi sebelum publikasi untuk memastikan tidak mengandung malware atau kode berbahaya. Namun, kami merekomendasikan untuk menjaga perangkat Anda tetap terbarukan dan menggunakan perangkat lunak antivirus."
+            },
+            {
+                "title": "6. Perubahan pada Kebijakan Ini",
+                "content": "Kami berhak untuk memperbarui kebijakan privasi ini kapan saja. Perubahan akan diposting di halaman ini dengan tanggal pembaruan yang sesuai."
+            }
+        ],
+        "backButton": "Kembali ke beranda"
+    },
+    "terms": {
+        "title": "Syarat dan Ketentuan",
+        "lastUpdated": "Terakhir diperbarui: 5 Desember 2024",
+        "sections": [
+            {
+                "title": "1. Penerimaan Ketentuan",
+                "content": "Dengan mengakses dan menggunakan The Sky Mods, Anda setuju untuk terikat oleh syarat dan ketentuan ini. Jika Anda tidak setuju dengan bagian mana pun dari ketentuan ini, Anda tidak boleh menggunakan layanan kami."
+            },
+            {
+                "title": "2. Penggunaan Mod",
+                "content": "Mod yang disediakan di platform ini untuk penggunaan pribadi dan non-komersial. Kami tidak menjamin bahwa mod akan berfungsi sempurna dengan semua versi Sky: Children of the Light. Menggunakan mod dapat melanggar persyaratan layanan game asli."
+            },
+            {
+                "title": "3. Tanggung Jawab Pengguna",
+                "content": "Anda bertanggung jawab atas penggunaan mod yang Anda unduh. The Sky Mods tidak bertanggung jawab atas kerusakan pada akun, perangkat, atau pengalaman bermain game Anda yang mungkin diakibatkan dari penggunaan mod."
+            },
+            {
+                "title": "4. Hak Cipta",
+                "content": "Semua mod tunduk pada hak cipta pembuat masing-masing. The Sky Mods bertindak semata-mata sebagai platform distribusi. Penulis mod mempertahankan semua hak atas karya mereka."
+            },
+            {
+                "title": "5. Konten yang Dilarang",
+                "content": "Dilarang mengunggah atau mendistribusikan mod yang berisi malware, kode berbahaya, konten ilegal, atau konten yang melanggar hak kekayaan intelektual."
+            },
+            {
+                "title": "6. Penangguhan Layanan",
+                "content": "Kami berhak menangguhkan atau menghentikan akses ke platform kami kapan saja tanpa pemberitahuan sebelumnya, terutama dalam kasus pelanggaran ketentuan ini."
+            },
+            {
+                "title": "7. Modifikasi",
+                "content": "Kami dapat memodifikasi ketentuan ini kapan saja. Modifikasi akan berlaku segera setelah diposting di halaman ini."
+            },
+            {
+                "title": "8. Hukum yang Berlaku",
+                "content": "Ketentuan ini diatur oleh hukum yang berlaku di yurisdiksi Anda. Setiap sengketa akan diselesaikan melalui arbitrase atau di pengadilan yang berwenang."
+            }
+        ],
+        "backButton": "Kembali ke beranda"
+    }
+}

@@ -6,12 +6,16 @@ import { Cloud, Home } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { getTranslations } from "@/lib/translations";
+import es from "@/messages/es.json";
+import en from "@/messages/en.json";
+import ja from "@/messages/ja.json";
+
+const dictionaries = { es, en, ja };
 
 export default function NotFound() {
   const pathname = usePathname();
-  const locale = pathname.split("/")[1] || "es";
-  const t = getTranslations(locale as "es" | "en");
+  const locale = (pathname.split("/")[1] || "es") as "es" | "en" | "ja";
+  const t = dictionaries[locale] || dictionaries.es;
 
   return (
     <div className="min-h-screen flex flex-col">

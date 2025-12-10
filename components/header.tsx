@@ -9,7 +9,7 @@ import type { Locale, Translations } from "@/lib/translations";
 
 interface HeaderProps {
   locale: Locale;
-  t: Translations[Locale];
+  t: Translations;
 }
 
 export function Header({ locale, t }: HeaderProps) {
@@ -94,7 +94,7 @@ export function Header({ locale, t }: HeaderProps) {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 glass border-b border-white/20 backdrop-blur-md">
+    <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -144,17 +144,20 @@ export function Header({ locale, t }: HeaderProps) {
             <LanguageSwitcher currentLocale={locale} />
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-[#2C3E50] cursor-pointer"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          {/* Mobile Controls */}
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher currentLocale={locale} />
+            <button
+              className="p-2 text-[#2C3E50] cursor-pointer"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -190,10 +193,6 @@ export function Header({ locale, t }: HeaderProps) {
                 </Link>
               );
             })}
-
-            <div className="pt-2">
-              <LanguageSwitcher currentLocale={locale} />
-            </div>
           </nav>
         </div>
 

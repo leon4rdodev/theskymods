@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Cloud, Heart } from "lucide-react";
 import type { Translations } from "@/lib/translations";
 
-export function Footer({ t }: { t: Translations["es"] | Translations["en"] }) {
+export function Footer({ t }: { t: Translations }) {
   const pathname = usePathname();
   // Extract locale from pathname (e.g., /es/contact -> es)
   const locale = pathname.split("/")[1] || "es";

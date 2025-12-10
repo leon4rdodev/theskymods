@@ -13,7 +13,7 @@ export default async function Home({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const t = getTranslations(locale);
+  const t = await getTranslations(locale);
 
   // Schema.org structured data for SEO
   const structuredData = {
@@ -55,11 +55,107 @@ export default async function Home({
       "Sky Children of the Light mods, Canvas modloader, LibTSM, The Sky Mods Android, Sky CotL mods",
   };
 
+  // FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: t.tutorial.faq.q1.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t.tutorial.faq.q1.answer,
+        },
+      },
+      {
+        "@type": "Question",
+        name: t.tutorial.faq.q2.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t.tutorial.faq.q2.answer,
+        },
+      },
+      {
+        "@type": "Question",
+        name: t.tutorial.faq.q3.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t.tutorial.faq.q3.answer,
+        },
+      },
+      {
+        "@type": "Question",
+        name: t.tutorial.faq.q4.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t.tutorial.faq.q4.answer,
+        },
+      },
+      {
+        "@type": "Question",
+        name: t.tutorial.faq.q5.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t.tutorial.faq.q5.answer,
+        },
+      },
+    ],
+  };
+
+  // HowTo Schema
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: t.tutorial.title,
+    description: t.tutorial.subtitle,
+    step: [
+      {
+        "@type": "HowToStep",
+        name: t.tutorial.steps.step1.title,
+        text: t.tutorial.steps.step1.description,
+        position: 1,
+      },
+      {
+        "@type": "HowToStep",
+        name: t.tutorial.steps.step2.title,
+        text: t.tutorial.steps.step2.description,
+        position: 2,
+      },
+      {
+        "@type": "HowToStep",
+        name: t.tutorial.steps.step3.title,
+        text: t.tutorial.steps.step3.description,
+        position: 3,
+      },
+      {
+        "@type": "HowToStep",
+        name: t.tutorial.steps.step4.title,
+        text: t.tutorial.steps.step4.description,
+        position: 4,
+      },
+      {
+        "@type": "HowToStep",
+        name: t.tutorial.steps.step5.title,
+        text: t.tutorial.steps.step5.description,
+        position: 5,
+      },
+      {
+        "@type": "HowToStep",
+        name: t.tutorial.steps.step6.title,
+        text: t.tutorial.steps.step6.description,
+        position: 6,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([structuredData, faqSchema, howToSchema]),
+        }}
       />
       <div className="min-h-screen flex flex-col">
         <Header locale={locale} t={t} />

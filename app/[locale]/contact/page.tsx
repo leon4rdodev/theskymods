@@ -1,9 +1,13 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ContactForm, ContactInfo } from "@/components/contact-form";
-import { getTranslations, type Locale } from "@/lib/translations";
+import {
+  getTranslations,
+  type Locale,
+  type Translations,
+} from "@/lib/translations";
 
-function ContactContent({ t }: { t: ReturnType<typeof getTranslations> }) {
+function ContactContent({ t }: { t: Translations }) {
   return (
     <section className="pt-26">
       {/* Background decorations */}
@@ -48,7 +52,7 @@ export default async function ContactPage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const t = getTranslations(locale);
+  const t = await getTranslations(locale);
 
   return (
     <div className="min-h-screen flex flex-col">

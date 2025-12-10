@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "title": "The Sky Mods - Sky: Children of the Light用Canvas Modloader & LibTSM",
+        "description": "Sky: Children of the Light用のCanvas ModloaderとLibTSMをダウンロード。ルート不要でMod、ハック、カスタマイズ。100%無料、オープンソース、安全。Android対応。"
+    },
+    "nav": {
+        "home": "ホーム",
+        "contact": "お問い合わせ",
+        "mods": "モッド",
+        "tutorial": "チュートリアル",
+        "language": "言語"
+    },
+    "hero": {
+        "title": "Sky用Canvas Modloader",
+        "subtitle": "CanvasとLibTSMをダウンロードして、ルート権限なしでAndroid版Sky: Children of the Lightの体験をカスタマイズしましょう",
+        "cta": "今すぐダウンロード"
+    },
+    "mods": {
+        "title": "Canvasをダウンロード",
+        "subtitle": "Android版Sky: Children of the LightでModを実行するために必要なすべて",
+        "download": "ダウンロード",
+        "categories": {
+            "ui": "UI",
+            "gameplay": "ゲームプレイ",
+            "cosmetics": "コスメティック",
+            "audio": "オーディオ",
+            "performance": "パフォーマンス"
+        },
+        "list": {
+            "canvas": {
+                "name": "Canvas Modloader",
+                "description": "Sky Modloader。昇格された権限なしでプラグインのブリッジとして機能するモジュラーラッパー"
+            },
+            "libtsm": {
+                "name": "LibTSM",
+                "description": "That Sky ModのAndroidポート。Canvas用に設計されたSkyの統一Modメニュー"
+            }
+        }
+    },
+    "features": {
+        "title": "なぜCanvasなのか？",
+        "subtitle": "Sky: Children of the Light用の軽量でモジュール式のModloader",
+        "safety": {
+            "title": "ルート不要",
+            "description": "Canvasは昇格された権限や特別なプログラミングスキルを必要としません。"
+        },
+        "easy": {
+            "title": "モジュール式",
+            "description": "既存のプラグインをロードするか、独自に作成できます。完全に拡張可能なシステム。"
+        },
+        "free": {
+            "title": "100%無料",
+            "description": "CanvasとLibTSMは完全に無料でオープンソースです。"
+        },
+        "community": {
+            "title": "軽量",
+            "description": "ストレージはわずか約15MB。ブリッジとして実行時にSkyにフックします。"
+        }
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "subtitle": "ご質問やご提案がありますか？お気軽にご連絡ください！",
+        "form": {
+            "name": "名前",
+            "namePlaceholder": "お名前",
+            "email": "メールアドレス",
+            "emailPlaceholder": "you@email.com",
+            "subject": "件名",
+            "subjectPlaceholder": "どのようなご用件ですか？",
+            "message": "メッセージ",
+            "messagePlaceholder": "メッセージをここに入力...",
+            "send": "メッセージを送信",
+            "sending": "送信中..."
+        },
+        "success": "メッセージが正常に送信されました！すぐに返信いたします。",
+        "validation": {
+            "nameRequired": "名前は必須です",
+            "emailRequired": "メールアドレスは必須です",
+            "emailInvalid": "有効なメールアドレスを入力してください",
+            "subjectRequired": "件名は必須です",
+            "messageRequired": "メッセージは必須です"
+        },
+        "info": {
+            "title": "その他の連絡方法",
+            "email": "メールを送る",
+            "emailLabel": "メール",
+            "instagram": "Instagramでフォロー",
+            "instagramLabel": "Instagram"
+        }
+    },
+    "credits": {
+        "badge": "クレジット",
+        "title": "謝辞",
+        "description": "このサイトは才能ある開発者によって作成されたツールを配布しています。すべてのクレジットは元の作成者に帰属します。",
+        "canvas": "Skyでカスタムプラグインをロードできる軽量で拡張可能なModloader",
+        "libtsm": "That Sky ModのAndroidポート、ゲーム用の完全な改造ライブラリ",
+        "repository": "公式GitHubリポジトリ",
+        "repoDescription": "すべてのファイルは公式のThatskyModリポジトリから配布されています。このサイトはダウンロードするためのユーザーフレンドリーなインターフェースのみを提供します。"
+    },
+    "tutorial": {
+        "title": "Canvasのインストール方法",
+        "subtitle": "CanvasをインストールしてSky: Children of the LightでModを使い始めるための完全なステップバイステップガイド",
+        "steps": {
+            "title": "インストール手順",
+            "step1": {
+                "title": "Canvas APKをダウンロード",
+                "description": "メインページからCanvasの最新バージョンをダウンロードしてください。APKファイルはダウンロードフォルダに保存されます。"
+            },
+            "step2": {
+                "title": "不明なソースを有効にする",
+                "description": "設定 → セキュリティ → ブラウザの「不明なソース」または「不明なアプリのインストール」を有効にしてください。"
+            },
+            "step3": {
+                "title": "Canvasをインストール",
+                "description": "ダウンロードしたAPKファイルを開き、画面の指示に従ってデバイスにCanvasをインストールしてください。"
+            },
+            "step4": {
+                "title": "LibTSMをダウンロード",
+                "description": "メインページからLibTSMをダウンロードしてください。これはCanvasに追加するメインのModです。"
+            },
+            "step5": {
+                "title": "Canvasを開いてModを追加",
+                "description": "Canvasを開き、「Modを追加」ボタン（+）をタップして、ダウンロードしたLibTSMファイルをインポートします。有効にしたいModを選択してください。"
+            },
+            "step6": {
+                "title": "ゲームを起動",
+                "description": "Canvasの「Live」ボタンをタップして、Modが有効になった状態でSky: Children of the Lightを開きます。カスタマイズされた体験をお楽しみください！"
+            }
+        },
+        "faq": {
+            "title": "よくある質問",
+            "q1": {
+                "question": "Canvasの使用は安全ですか？",
+                "answer": "Canvasはオープンソースであり、ルート権限を必要としません。ただし、Modの使用はゲームの利用規約に違反する可能性があります。自己責任で使用してください。"
+            },
+            "q2": {
+                "question": "Canvasを使用するとBANされますか？",
+                "answer": "ゲームの改造を使用する場合、BANされるリスクがあります。Modを責任を持って使用し、ゲーム内で悪用しないことをお勧めします。"
+            },
+            "q3": {
+                "question": "CanvasはiOSで動作しますか？",
+                "answer": "いいえ、CanvasはAndroidでのみ利用可能です。現在、iOS版の計画はありません。"
+            },
+            "q4": {
+                "question": "Canvasを更新するにはどうすればよいですか？",
+                "answer": "当社のウェブサイトから最新バージョンをダウンロードし、古いバージョンの上にインストールしてください。設定とプラグインは保持されます。"
+            },
+            "q5": {
+                "question": "他のModはどこで見つけられますか？",
+                "answer": "Discordコミュニティや公式GitHubリポジトリで追加のModを見つけることができます。LibTSMには多くの機能が組み込まれています。"
+            }
+        }
+    },
+    "footer": {
+        "description": "Sky: Children of the Light Modの信頼できるソース。安全にゲーム体験を向上させましょう。",
+        "links": {
+            "title": "リンク",
+            "home": "ホーム",
+            "contact": "お問い合わせ"
+        },
+        "legal": {
+            "title": "法的事項",
+            "privacy": "プライバシー",
+            "terms": "利用規約",
+            "disclaimer": "免責事項"
+        },
+        "copyright": "All rights reserved.",
+        "disclaimer": "The Sky Modsはthatgamecompanyとは提携していません。"
+    },
+    "notFound": {
+        "title": "おっと！雲の中で迷子になったようです",
+        "description": "このページは地平線の彼方へ飛んでいってしまったようです。心配しないでください、帰り道を見つけるお手伝いをします。",
+        "backHome": "ホームに戻る"
+    },
+    "disclaimer": {
+        "title": "免責事項",
+        "lastUpdated": "最終更新日: 2025年12月5日",
+        "warning": "重要：Modを使用する前に注意深くお読みください",
+        "sections": [
+            {
+                "title": "提携に関する免責事項",
+                "content": "The Sky Modsは、thatgamecompanyまたはSky: Children of the Lightと提携、承認、後援、または承認されていません。"
+            },
+            {
+                "title": "使用リスク",
+                "content": "Modの使用は、ゲームの利用規約に違反する可能性があります。ユーザーは、Modの使用に関連するすべてのリスク（アカウントの停止を含む）を負うものとします。"
+            },
+            {
+                "title": "3. 利用規約違反",
+                "content": "Modの使用は、Sky: Children of the Lightの利用規約に違反する可能性があります。これらのModをダウンロードして使用することにより、アカウントの停止または削除を含む、関連するすべてのリスクを負うことを認めるものとします。"
+            },
+            {
+                "title": "4. 保証なし",
+                "content": "Modが正しく動作すること、デバイスと互換性があること、または技術的な問題を引き起こさないことを保証しません。デバイスへの損害、データの損失、またはゲームファイルの破損について、私たちは責任を負いません。"
+            },
+            {
+                "title": "5. サードパーティコンテンツ",
+                "content": "Modはサードパーティの開発者によって作成されています。The Sky Modsは配布プラットフォームとしてのみ機能し、公開されたModの品質、セキュリティ、または機能を管理または保証しません。"
+            },
+            {
+                "title": "6. ソフトウェアの安全性",
+                "content": "私たちは安全なソフトウェアを提供するよう努めていますが、ダウンロードしたファイルの使用によって生じた損害について責任を負いません。"
+            },
+            {
+                "title": "7. 知的財産",
+                "content": "Sky: Children of the Lightに関連するすべての名前、商標、ロゴ、および資料は、thatgamecompany, Inc.の所有物です。The Sky Modsは、これらの資料に対するいかなる権利も主張しません。"
+            },
+            {
+                "title": "8. ゲームの変更",
+                "content": "ゲームの更新後、Modが機能しなくなる場合があります。将来のゲームバージョンと互換性があるようにModを維持または更新することを保証しません。"
+            },
+            {
+                "title": "9. 法的責任",
+                "content": "The Sky Modsとその運営者は、当社のサービスまたはダウンロードされたModの使用または使用不能から生じる、いかなる直接的、間接的、付随的、特別、または結果的な損害についても、法的責任を負いません。"
+            }
+        ],
+        "backButton": "ホームに戻る"
+    },
+    "privacy": {
+        "title": "プライバシーポリシー",
+        "lastUpdated": "最終更新日: 2024年12月5日",
+        "sections": [
+            {
+                "title": "1. 収集する情報",
+                "content": "The Sky Modsは個人を特定できる情報を収集しません。当ウェブサイトは主にMod配信プラットフォームとして機能しています。ユーザーデータ、メールアドレス、連絡先情報を永続的に保存することはありません。"
+            },
+            {
+                "title": "2. CookieとトラッキングTechnology",
+                "content": "言語設定など、基本的なサイト機能のために必須Cookieを使用しています。プライバシーを侵害するサードパーティのトラッキングCookieや分析ツールは使用していません。"
+            },
+            {
+                "title": "3. Modのダウンロード",
+                "content": "当プラットフォームからModをダウンロードする際、IPアドレスや個人情報を記録することはありません。ダウンロード統計は匿名で、Modの人気度を表示するためにのみ使用されます。"
+            },
+            {
+                "title": "4. お問い合わせフォーム",
+                "content": "お問い合わせフォームを使用する場合、提供された情報（名前、メールアドレス、メッセージ）は、お問い合わせへの返信にのみ使用され、恒久的なデータベースには保存されません。"
+            },
+            {
+                "title": "5. セキュリティ",
+                "content": "プラットフォームで利用可能なすべてのModは、公開前に検証され、マルウェアや悪意のあるコードが含まれていないことを確認しています。ただし、デバイスを最新の状態に保ち、ウイルス対策ソフトウェアを使用することをお勧めします。"
+            },
+            {
+                "title": "6. 本ポリシーの変更",
+                "content": "私たちは、いつでもこのプライバシーポリシーを更新する権利を留保します。変更は、対応する更新日とともにこのページに掲載されます。"
+            }
+        ],
+        "backButton": "ホームに戻る"
+    },
+    "terms": {
+        "title": "利用規約",
+        "lastUpdated": "最終更新日: 2025年12月5日",
+        "sections": [
+            {
+                "title": "1. 規約への同意",
+                "content": "当サイトにアクセスすることにより、これらの利用規約に同意したことになります。同意しない場合は、当サイトを使用しないでください。"
+            },
+            {
+                "title": "2. ライセンス",
+                "content": "CanvasおよびLibTSMはオープンソースソフトウェアです。それぞれのライセンス（通常はGPLまたはMIT）に従って使用してください。"
+            },
+            {
+                "title": "3. 免責事項",
+                "content": "当サイトのコンテンツは「現状有姿」で提供されます。明示または黙示を問わず、いかなる保証も行いません。"
+            },
+            {
+                "title": "4. 著作権",
+                "content": "すべてのModは、それぞれの作成者の著作権の対象となります。The Sky Modsは配布プラットフォームとしてのみ機能します。Modの作成者は、自身の作品に対するすべての権利を保持します。"
+            },
+            {
+                "title": "5. 禁止コンテンツ",
+                "content": "マルウェア、悪意のあるコード、違法なコンテンツ、または知的財産権を侵害するコンテンツを含むModをアップロードまたは配布することは禁止されています。"
+            },
+            {
+                "title": "6. サービスの停止",
+                "content": "私たちは、特にこれらの規約に違反した場合、事前の通知なしにいつでもプラットフォームへのアクセスを停止または終了する権利を留保します。"
+            },
+            {
+                "title": "7. 変更",
+                "content": "私たちはいつでもこれらの規約を変更することができます。変更は、このページに掲載された直後に有効になります。"
+            },
+            {
+                "title": "8. 準拠法",
+                "content": "これらの規約は、あなたの管轄区域の適用法に準拠します。紛争は、仲裁または管轄裁判所を通じて解決されます。"
+            }
+        ],
+        "backButton": "ホームに戻る"
+    }
+}

@@ -1,13 +1,6 @@
 export interface Mod {
   id: string;
-  name: {
-    es: string;
-    en: string;
-  };
-  description: {
-    es: string;
-    en: string;
-  };
+  translationKey: string;
   category: string;
   version: string;
   downloads: number;
@@ -22,14 +15,7 @@ export interface Mod {
 export const modsData: Mod[] = [
   {
     id: "1",
-    name: {
-      es: "Canvas Modloader",
-      en: "Canvas Modloader",
-    },
-    description: {
-      es: "Sky Modloader. Wrapper modular que actúa como puente para plugins sin permisos elevados",
-      en: "Sky Modloader. Modular wrapper acting as a bridge for plugins without elevated privileges",
-    },
+    translationKey: "canvas",
     category: "gameplay",
     version: "v1.6.7b",
     downloads: 0,
@@ -46,14 +32,7 @@ export const modsData: Mod[] = [
   },
   {
     id: "2",
-    name: {
-      es: "LibTSM",
-      en: "LibTSM",
-    },
-    description: {
-      es: "Port de Android de That Sky Mod. Menú de mods unificado para Sky, diseñado para Canvas",
-      en: "Android port of That Sky Mod. Unified mod menu for Sky, designed for Canvas",
-    },
+    translationKey: "libtsm",
     category: "gameplay",
     version: "v0.18.0",
     downloads: 0,

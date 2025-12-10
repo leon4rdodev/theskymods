@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { X, Cookie } from "lucide-react";
 import type { Locale } from "@/lib/translations";
 import { Button } from "@/components/ui/button";
-import { Link } from "lucide-react";
 
 export function CookieBanner({ locale }: { locale: Locale }) {
   const [showBanner, setShowBanner] = useState(false);
@@ -48,6 +47,14 @@ export function CookieBanner({ locale }: { locale: Locale }) {
       reject: "Reject",
       privacy: "Privacy Policy",
     },
+    ja: {
+      title: "Cookieの使用について",
+      message:
+        "言語設定の保存など、体験を向上させるために必須のCookieを使用しています。追跡や分析用のCookieは使用していません。",
+      accept: "同意する",
+      reject: "拒否する",
+      privacy: "プライバシーポリシー",
+    },
   };
 
   const text = content[locale];
@@ -55,9 +62,9 @@ export function CookieBanner({ locale }: { locale: Locale }) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-in slide-in-from-bottom-5">
       <div className="container mx-auto max-w-4xl">
-        <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl border border-[#87CEEB]/20 shadow-2xl">
+        <div className="bg-white p-6 rounded-2xl border border-[#87CEEB]/20 shadow-2xl">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Cookie className="h-6 w-6 text-[#87CEEB]" />
             </div>
             <div className="flex-1">
@@ -91,7 +98,7 @@ export function CookieBanner({ locale }: { locale: Locale }) {
             </div>
             <button
               onClick={rejectCookies}
-              className="flex-shrink-0 text-[#5a6a7a] hover:text-[#2C3E50] transition-colors cursor-pointer"
+              className="shrink-0 text-[#5a6a7a] hover:text-[#2C3E50] transition-colors cursor-pointer"
               aria-label="Close"
             >
               <X className="h-5 w-5" />

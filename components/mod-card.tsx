@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Download, Calendar, Tag, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import type { Locale, Translations } from "@/lib/translations";
 import type { Mod } from "@/lib/mods-data";
 
@@ -12,7 +11,7 @@ interface ModCardProps {
   onDownload: (modId: string) => void;
   isLoading?: boolean;
   locale: Locale;
-  t: Translations[Locale];
+  t: Translations;
 }
 
 export function ModCard({
@@ -38,13 +37,20 @@ export function ModCard({
     : [mod.authorGithub];
   const authorNames = mod.author.split(" & ");
 
+  // Get localized content using the translation key
+  // We cast to any here because TypeScript doesn't know the keys of the dynamic JSON at compile time
+  // in a strict way without more complex type generation
+  const modTranslations = (t.mods.list as any)[mod.translationKey];
+  const localizedName = modTranslations?.name || mod.id;
+  const localizedDescription = modTranslations?.description || "";
+
   return (
     <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
       {/* Image */}
       <div className="relative h-40 overflow-hidden">
         <Image
           src={mod.image || "/placeholder.svg"}
-          alt={mod.name[locale]}
+          alt={localizedName}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -54,10 +60,10 @@ export function ModCard({
       {/* Content */}
       <div className="p-5 flex flex-col flex-1">
         <h3 className="font-bold text-lg text-[#2C3E50] mb-2 line-clamp-1">
-          {mod.name[locale]}
+          {localizedName}
         </h3>
         <p className="text-sm text-[#5a6a7a] mb-4 line-clamp-2 leading-relaxed">
-          {mod.description[locale]}
+          {localizedDescription}
         </p>
 
         {/* Meta info */}
@@ -81,7 +87,7 @@ export function ModCard({
         </div>
 
         {/* Author and Download */}
-        <div className="flex items-center justify-between gap-4 mt-auto pt-4 border-t border-[#2C3E50]/10">
+        <div className="flex items-end justify-between gap-4 mt-auto pt-4 border-t border-[#2C3E50]/10">
           <div className="flex flex-col gap-1.5">
             <span className="text-xs text-[#5a6a7a]">by</span>
             <div className="flex flex-wrap gap-1">
@@ -107,7 +113,7 @@ export function ModCard({
                 // Create a temporary anchor element to trigger download
                 const link = document.createElement("a");
                 link.href = mod.downloadUrl;
-                link.download = `${mod.name.en.replace(/\s+/g, "_")}_${
+                link.download = `${localizedName.replace(/\s+/g, "_")}_${
                   mod.version
                 }.so`;
                 document.body.appendChild(link);
@@ -116,7 +122,7 @@ export function ModCard({
               }
             }}
             size="sm"
-            className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-medium hover:opacity-90 transition-opacity cursor-pointer"
+            className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-bold rounded-xl shadow-lg shadow-[#87CEEB]/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
           >
             <Download className="h-4 w-4 mr-1" />
             {t.mods.download}

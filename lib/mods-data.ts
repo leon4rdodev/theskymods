@@ -17,9 +17,9 @@ export const modsData: Mod[] = [
     id: "1",
     translationKey: "canvas",
     category: "gameplay",
-    version: "v1.6.7b",
+    version: "v1.6.8",
     downloads: 0,
-    updatedAt: "2024-12-02",
+    updatedAt: "2024-12-12",
     image: "/canvas.webp",
     author: "artdeell & lukas0x1",
     authorGithub: [
@@ -34,15 +34,15 @@ export const modsData: Mod[] = [
     id: "2",
     translationKey: "libtsm",
     category: "gameplay",
-    version: "v0.19.0",
+    version: "v0.19.1",
     downloads: 0,
-    updatedAt: "2024-12-11",
+    updatedAt: "2024-12-12",
     image: "/libtsm.webp",
     author: "XeTrinityz",
     authorGithub: "https://github.com/XeTrinityz",
     size: "4.27 MB",
     downloadUrl:
-      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.19.0/libTSM.so",
+      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.19.1/libTSM.so",
   },
 ];
 

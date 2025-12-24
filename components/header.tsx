@@ -113,6 +113,9 @@ export function Header({ locale, t }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
+            {/* Language Selector */}
+            <LanguageSwitcher currentLocale={locale} />
+
             {navLinks.map((link) => {
               let isActive = false;
               if (link.href.includes("#")) {
@@ -139,9 +142,6 @@ export function Header({ locale, t }: HeaderProps) {
                 </Link>
               );
             })}
-
-            {/* Language Selector */}
-            <LanguageSwitcher currentLocale={locale} />
           </nav>
 
           {/* Mobile Controls */}

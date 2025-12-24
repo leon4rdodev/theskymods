@@ -55,6 +55,14 @@ export function CookieBanner({ locale }: { locale: Locale }) {
       reject: "拒否する",
       privacy: "プライバシーポリシー",
     },
+    id: {
+      title: "Penggunaan Cookie",
+      message:
+        "Kami menggunakan cookie penting untuk meningkatkan pengalaman Anda, seperti menyimpan preferensi bahasa Anda. Kami tidak menggunakan cookie pelacakan atau analitik.",
+      accept: "Terima",
+      reject: "Tolak",
+      privacy: "Kebijakan Privasi",
+    },
   };
 
   const text = content[locale];

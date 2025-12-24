@@ -34,7 +34,7 @@ export const modsData: Mod[] = [
     id: "2",
     translationKey: "libtsm",
     category: "gameplay",
-    version: "v0.19.1",
+    version: "v0.20.0",
     downloads: 0,
     updatedAt: "2024-12-12",
     image: "/libtsm.webp",
@@ -42,7 +42,7 @@ export const modsData: Mod[] = [
     authorGithub: "https://github.com/XeTrinityz",
     size: "4.27 MB",
     downloadUrl:
-      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.19.1/libTSM.so",
+      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.20.0/libTSM.so",
   },
 ];
 

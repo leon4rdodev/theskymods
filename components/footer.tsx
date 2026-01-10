@@ -11,9 +11,9 @@ export function Footer({ t }: { t: Translations }) {
   const locale = pathname.split("/")[1] || "es";
 
   return (
-    <footer className="bg-linear-to-b from-transparent to-[#2C3E50]/10 pt-16 pb-8">
+    <footer className="bg-transparent pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 max-w-6xl mx-auto">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link
@@ -110,7 +110,7 @@ export function Footer({ t }: { t: Translations }) {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-[#87CEEB]/20 pt-8">
+        <div className="border-t border-[#87CEEB]/20 pt-8 max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-[#5a6a7a] flex items-center gap-1">
               © 2025 The Sky Mods. {t.footer.copyright}

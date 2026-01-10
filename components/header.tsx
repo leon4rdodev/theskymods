@@ -96,7 +96,7 @@ export function Header({ locale, t }: HeaderProps) {
   return (
     <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between max-w-6xl mx-auto w-full">
           {/* Logo */}
           <Link
             href={`/${locale}`}

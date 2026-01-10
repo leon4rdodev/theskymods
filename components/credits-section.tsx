@@ -5,7 +5,7 @@ import type { Translations } from "@/lib/translations";
 
 export function CreditsSection({ t }: { t: Translations }) {
   return (
-    <section className="py-20 bg-linear-to-b from-white to-[#E8F4F8]/30">
+    <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}

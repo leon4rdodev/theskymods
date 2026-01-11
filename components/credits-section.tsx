@@ -5,8 +5,22 @@ import type { Translations } from "@/lib/translations";
 
 export function CreditsSection({ t }: { t: Translations }) {
   return (
-    <section className="py-20 bg-transparent">
-      <div className="container mx-auto px-4">
+    <section className="relative overflow-hidden py-20 bg-transparent">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#87CEEB]/20 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-[#F4D03F]/20 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute top-40 right-1/4 w-64 h-64 bg-[#FFB6C1]/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "4s" }}
+        />
+      </div>
+
+
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">

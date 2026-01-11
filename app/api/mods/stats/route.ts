@@ -27,6 +27,7 @@ export async function GET() {
       downloads: {
         "1": 0,
         "2": 0,
+        "3": 0,
       },
       source: "error",
       error: error instanceof Error ? error.message : "Unknown error",

@@ -34,6 +34,10 @@
             "libtsm": {
                 "name": "LibTSM",
                 "description": "Android port of That Sky Mod. Unified mod menu for Sky, designed for Canvas"
+            },
+            "canvasEmulator": {
+                "name": "Canvas for Emulators",
+                "description": "Special version of Canvas Modloader optimized for Android emulators"
             }
         }
     },
@@ -54,7 +58,7 @@
         },
         "community": {
             "title": "Lightweight",
-            "description": "Only ~15 MB of storage. Hooks into Sky at runtime acting as a bridge."
+            "description": "Only ~11 MB of storage. Hooks into Sky at runtime acting as a bridge."
         }
     },
     "contact": {
@@ -165,7 +169,14 @@
             "disclaimer": "Disclaimer"
         },
         "copyright": "All rights reserved.",
-        "disclaimer": "The Sky Mods is not affiliated with thatgamecompany."
+        "disclaimer": "The Sky Mods is not affiliated with thatgamecompany.",
+        "madeIn": "Made in RD 🇩🇴 with"
+    },
+    "notifications": {
+        "downloadStarted": "Download started",
+        "downloadDesc": "Your download has begun successfully.",
+        "linkCopied": "Link copied",
+        "linkCopiedDesc": "Download link copied to clipboard."
     },
     "notFound": {
         "title": "Oops! You're lost in the clouds",

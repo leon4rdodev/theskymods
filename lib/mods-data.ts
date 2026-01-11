@@ -44,6 +44,23 @@ export const modsData: Mod[] = [
     downloadUrl:
       "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.21.0/libTSM.so",
   },
+  {
+    id: "3",
+    translationKey: "canvasEmulator",
+    category: "gameplay",
+    version: "v1.6.9",
+    downloads: 0,
+    updatedAt: "2025-01-10",
+    image: "/canvas.webp",
+    author: "artdeell & lukas0x1",
+    authorGithub: [
+      "https://github.com/artdeell",
+      "https://github.com/lukas0x1",
+    ],
+    size: "11 MB",
+    downloadUrl:
+      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.21.0/Canvas4Emulator.apk",
+  },
 ];
 
 export const categories = [

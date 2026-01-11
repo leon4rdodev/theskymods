@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Download, Calendar, Tag, ExternalLink } from "lucide-react";
+import { Download, Calendar, Tag, ExternalLink, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 import type { Locale, Translations } from "@/lib/translations";
 import type { Mod } from "@/lib/mods-data";
 
@@ -21,6 +22,8 @@ export function ModCard({
   locale,
   t,
 }: ModCardProps) {
+  const { toast } = useToast();
+
   const categoryColors: Record<string, string> = {
     ui: "bg-[#87CEEB]/20 text-[#2C3E50] border-[#87CEEB]/40",
     gameplay: "bg-[#98D8C8]/20 text-[#2C3E50] border-[#98D8C8]/40",
@@ -38,11 +41,22 @@ export function ModCard({
   const authorNames = mod.author.split(" & ");
 
   // Get localized content using the translation key
-  // We cast to any here because TypeScript doesn't know the keys of the dynamic JSON at compile time
-  // in a strict way without more complex type generation
   const modTranslations = (t.mods.list as any)[mod.translationKey];
   const localizedName = modTranslations?.name || mod.id;
   const localizedDescription = modTranslations?.description || "";
+
+  const handleShare = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    // Share the website URL with the mods anchor
+    const shareUrl = `${window.location.origin}/${locale}#mods`;
+    
+    navigator.clipboard.writeText(shareUrl);
+    toast({
+      title: t.notifications.linkCopied,
+      description: t.notifications.linkCopiedDesc,
+      duration: 3000,
+    });
+  };
 
   return (
     <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
@@ -106,27 +120,43 @@ export function ModCard({
               ))}
             </div>
           </div>
-          <Button
-            onClick={() => {
-              onDownload(mod.id);
-              if (mod.downloadUrl) {
-                // Create a temporary anchor element to trigger download
-                const link = document.createElement("a");
-                link.href = mod.downloadUrl;
-                link.download = `${localizedName.replace(/\s+/g, "_")}_${
-                  mod.version
-                }.so`;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }
-            }}
-            size="sm"
-            className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-bold rounded-xl shadow-lg shadow-[#87CEEB]/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
-          >
-            <Download className="h-4 w-4 mr-1" />
-            {t.mods.download}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-xl border-[#87CEEB]/40 bg-[#87CEEB]/10 text-[#2C3E50] hover:bg-[#87CEEB]/30 hover:text-[#2C3E50] transition-colors cursor-pointer"
+              onClick={handleShare}
+              title={t.notifications.linkCopiedDesc}
+            >
+              <Share2 className="h-4 w-4" />
+            </Button>
+            <Button
+              onClick={() => {
+                onDownload(mod.id);
+                toast({
+                  title: t.notifications.downloadStarted,
+                  description: t.notifications.downloadDesc,
+                  duration: 3000,
+                });
+                if (mod.downloadUrl) {
+                  // Create a temporary anchor element to trigger download
+                  const link = document.createElement("a");
+                  link.href = mod.downloadUrl;
+                  link.download = `${localizedName.replace(/\s+/g, "_")}_${
+                    mod.version
+                  }.so`;
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }
+              }}
+              size="sm"
+              className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-bold rounded-xl shadow-lg shadow-[#87CEEB]/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+            >
+              <Download className="h-4 w-4 mr-1" />
+              {t.mods.download}
+            </Button>
+          </div>
         </div>
       </div>
     </div>

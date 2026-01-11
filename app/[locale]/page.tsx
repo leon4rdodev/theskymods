@@ -6,6 +6,7 @@ import { ModsSection } from "@/components/mods-section";
 import { InstallationSteps } from "@/components/installation-steps";
 import { CreditsSection } from "@/components/credits-section";
 import { getTranslations, type Locale } from "@/lib/translations";
+import { getLatestMods } from "@/lib/github";
 
 export default async function Home({
   params,
@@ -14,6 +15,7 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const t = await getTranslations(locale);
+  const mods = await getLatestMods();
 
   // Schema.org structured data for SEO
   const structuredData = {
@@ -162,7 +164,7 @@ export default async function Home({
         <main className="flex-1">
           <HeroSection t={t} />
           <FeaturesSection t={t} />
-          <ModsSection locale={locale} t={t} />
+          <ModsSection locale={locale} t={t} initialMods={mods} />
           <InstallationSteps t={t} />
           <CreditsSection t={t} />
         </main>

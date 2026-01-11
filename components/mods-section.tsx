@@ -3,15 +3,16 @@
 import { useState, useEffect } from "react";
 import { ModCard } from "@/components/mod-card";
 import type { Locale, Translations } from "@/lib/translations";
-import { modsData, type Mod } from "@/lib/mods-data";
+import { type Mod } from "@/lib/mods-data";
 
 interface ModsSectionProps {
   locale: Locale;
   t: Translations;
+  initialMods: Mod[];
 }
 
-export function ModsSection({ locale, t }: ModsSectionProps) {
-  const [mods, setMods] = useState<Mod[]>(modsData);
+export function ModsSection({ locale, t, initialMods }: ModsSectionProps) {
+  const [mods, setMods] = useState<Mod[]>(initialMods);
   const [isLoading, setIsLoading] = useState(true);
 
   // Fetch real download statistics on mount

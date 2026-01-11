@@ -4,6 +4,7 @@ import { Nunito } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CookieBanner } from "@/components/cookie-banner";
+import { Toaster } from "@/components/ui/toaster";
 import { locales, defaultLocale, type Locale } from "@/i18n.config";
 import { getTranslations } from "@/lib/translations";
 import {
@@ -156,6 +157,7 @@ export default async function LocaleLayout({
       </head>
       <body className={`${nunito.className} font-sans antialiased`}>
         {children}
+        <Toaster />
         <CookieBanner locale={locale} />
         <Analytics />
         <SpeedInsights />

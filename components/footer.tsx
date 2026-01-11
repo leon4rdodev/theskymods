@@ -115,10 +115,10 @@ export function Footer({ t }: { t: Translations }) {
             <p className="text-sm text-[#5a6a7a] flex items-center gap-1">
               © 2025 The Sky Mods. {t.footer.copyright}
             </p>
-            <p className="text-xs text-[#5a6a7a] flex items-center gap-1">
-              Made with{" "}
-              <Heart className="h-3 w-3 text-[#FFB6C1] fill-[#FFB6C1]" /> •{" "}
-              {t.footer.disclaimer}
+            <p className="text-xs text-[#5a6a7a] text-center md:text-right">
+              {t.footer.madeIn}{" "}
+              <Heart className="h-3 w-3 text-[#FFB6C1] fill-[#FFB6C1] inline-block align-middle mx-0.5" />{" "}
+              • {t.footer.disclaimer}
             </p>
           </div>
         </div>

@@ -36,7 +36,7 @@ export function FeaturesSection({ t }: { t: Translations }) {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-[#E8F4F8]/30">
+    <section className="py-20 bg-linear-to-b from-white to-[#E8F4F8]/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">

@@ -34,6 +34,10 @@
             "libtsm": {
                 "name": "LibTSM",
                 "description": "Port Android dari That Sky Mod. Menu mod terpadu untuk Sky, dirancang untuk Canvas"
+            },
+            "canvasEmulator": {
+                "name": "Canvas untuk Emulator",
+                "description": "Versi khusus Canvas Modloader yang dioptimalkan untuk emulator Android"
             }
         }
     },
@@ -54,7 +58,7 @@
         },
         "community": {
             "title": "Ringan",
-            "description": "Hanya sekitar ~15 MB penyimpanan. Terhubung ke Sky saat runtime sebagai jembatan."
+            "description": "Hanya sekitar ~11 MB penyimpanan. Terhubung ke Sky saat runtime sebagai jembatan."
         }
     },
     "contact": {
@@ -165,7 +169,14 @@
             "disclaimer": "Penafian"
         },
         "copyright": "Semua hak dilindungi.",
-        "disclaimer": "The Sky Mods tidak berafiliasi dengan thatgamecompany."
+        "disclaimer": "The Sky Mods tidak berafiliasi dengan thatgamecompany.",
+        "madeIn": "Dibuat di RD 🇩🇴 dengan"
+    },
+    "notifications": {
+        "downloadStarted": "Unduhan dimulai",
+        "downloadDesc": "Unduhan Anda telah dimulai dengan sukses.",
+        "linkCopied": "Tautan disalin",
+        "linkCopiedDesc": "Tautan unduhan disalin ke papan klip."
     },
     "notFound": {
         "title": "Ups! Anda tersesat di awan",

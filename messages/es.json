@@ -34,6 +34,10 @@
             "libtsm": {
                 "name": "LibTSM",
                 "description": "Port de Android de That Sky Mod. Menú de mods unificado para Sky, diseñado para Canvas"
+            },
+            "canvasEmulator": {
+                "name": "Canvas para Emuladores",
+                "description": "Versión especial de Canvas Modloader optimizada para emuladores de Android"
             }
         }
     },
@@ -54,7 +58,7 @@
         },
         "community": {
             "title": "Ligero",
-            "description": "Solo ~15 MB de almacenamiento. Se conecta a Sky en tiempo de ejecución como puente."
+            "description": "Solo ~11 MB de almacenamiento. Se conecta a Sky en tiempo de ejecución como puente."
         }
     },
     "contact": {
@@ -152,7 +156,7 @@
         }
     },
     "footer": {
-        "description": "Tu fuente confiable de mods para Sky: Children of the Light. Mejora tu experiencia de juego con seguridad.",
+        "description": "Tu fuente confiable de mods para Sky: Children of the Light. Mejora tu experiencia de juego de forma segura.",
         "links": {
             "title": "Enlaces",
             "home": "Inicio",
@@ -165,7 +169,14 @@
             "disclaimer": "Descargo"
         },
         "copyright": "Todos los derechos reservados.",
-        "disclaimer": "The Sky Mods no está afiliado con thatgamecompany."
+        "disclaimer": "The Sky Mods no está afiliado con thatgamecompany.",
+        "madeIn": "Hecho en RD 🇩🇴 con"
+    },
+    "notifications": {
+        "downloadStarted": "Descarga iniciada",
+        "downloadDesc": "Tu descarga ha comenzado correctamente.",
+        "linkCopied": "Enlace copiado",
+        "linkCopiedDesc": "Enlace de descarga copiado al portapapeles."
     },
     "notFound": {
         "title": "¡Oops! Te has perdido en las nubes",

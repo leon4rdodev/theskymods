@@ -34,6 +34,10 @@
             "libtsm": {
                 "name": "LibTSM",
                 "description": "That Sky ModのAndroidポート。Canvas用に設計されたSkyの統一Modメニュー"
+            },
+            "canvasEmulator": {
+                "name": "エミュレータ用Canvas",
+                "description": "Androidエミュレータ向けに最適化されたCanvas Modloaderの特別バージョン"
             }
         }
     },
@@ -54,7 +58,7 @@
         },
         "community": {
             "title": "軽量",
-            "description": "ストレージはわずか約15MB。ブリッジとして実行時にSkyにフックします。"
+            "description": "ストレージはわずか約11MB。ブリッジとして実行時にSkyにフックします。"
         }
     },
     "contact": {
@@ -164,8 +168,15 @@
             "terms": "利用規約",
             "disclaimer": "免責事項"
         },
-        "copyright": "All rights reserved.",
-        "disclaimer": "The Sky Modsはthatgamecompanyとは提携していません。"
+        "copyright": "無断転載を禁じます。",
+        "disclaimer": "The Sky Modsはthatgamecompanyとは関係ありません。",
+        "madeIn": "RD 🇩🇴 で"
+    },
+    "notifications": {
+        "downloadStarted": "ダウンロード開始",
+        "downloadDesc": "ダウンロードが正常に開始されました。",
+        "linkCopied": "リンクをコピーしました",
+        "linkCopiedDesc": "ダウンロードリンクをクリップボードにコピーしました。"
     },
     "notFound": {
         "title": "おっと！雲の中で迷子になったようです",

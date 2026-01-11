@@ -91,14 +91,14 @@ export function CookieBanner({ locale }: { locale: Locale }) {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
                   onClick={acceptCookies}
-                  className="bg-[#87CEEB] text-white hover:bg-[#87CEEB]/90"
+                  className="bg-[#87CEEB] text-white hover:bg-[#87CEEB]/90 cursor-pointer"
                 >
                   {text.accept}
                 </Button>
                 <Button
                   onClick={rejectCookies}
                   variant="outline"
-                  className="border-[#87CEEB]/30 text-[#5a6a7a] hover:bg-[#87CEEB]/10"
+                  className="border-[#87CEEB]/30 text-[#5a6a7a] hover:bg-[#87CEEB]/10 cursor-pointer"
                 >
                   {text.reject}
                 </Button>

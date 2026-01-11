@@ -13,8 +13,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "modId is required" }, { status: 400 });
     }
 
-    // Validate modId (only accept "1" or "2")
-    if (!["1", "2"].includes(modId)) {
+    // Validate modId (only accept "1", "2", or "3")
+    if (!["1", "2", "3"].includes(modId)) {
       return NextResponse.json({ error: "Invalid modId" }, { status: 400 });
     }
 

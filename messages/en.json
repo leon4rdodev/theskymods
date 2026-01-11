@@ -97,7 +97,9 @@
         "title": "Acknowledgments",
         "description": "This site distributes tools created by talented developers. All credit goes to the original creators.",
         "canvas": "Lightweight and extensible modloader that allows loading custom plugins in Sky",
-        "libtsm": "Android port of That Sky Mod, a complete modification library for the game",
+        "libtsm": "Android port of That Sky Mod, a comprehensive modding library for the game",
+        "websiteDev": "Web Developer",
+        "leon4rdodevDesc": "Responsible for the design and maintenance of this site. Facilitating mod access for the community.",
         "repository": "XeTrinityz Repository",
         "repoDescription": "All files are distributed from XeTrinityz's repository. Special thanks to XeTrinityz for their work on ThatSkyMod."
     },

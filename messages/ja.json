@@ -97,8 +97,10 @@
         "title": "謝辞",
         "description": "このサイトは才能ある開発者によって作成されたツールを配布しています。すべてのクレジットは元の作成者に帰属します。",
         "canvas": "Skyでカスタムプラグインをロードできる軽量で拡張可能なModloader",
-        "libtsm": "That Sky ModのAndroidポート、ゲーム用の完全な改造ライブラリ",
-        "repository": "XeTrinityz リポジトリ",
+        "libtsm": "ゲームの包括的なMODライブラリであるThat Sky ModのAndroidポート",
+        "websiteDev": "ウェブ開発者",
+        "leon4rdodevDesc": "このサイトの設計と保守を担当。コミュニティへのMODアクセスを容易にしています。",
+        "repository": "XeTrinityzリポジトリ",
         "repoDescription": "すべてのファイルはXeTrinityzのリポジトリから配布されています。ThatSkyModでの作業に対し、XeTrinityzに特別な感謝を捧げます。"
     },
     "tutorial": {

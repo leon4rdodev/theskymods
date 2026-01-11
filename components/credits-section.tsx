@@ -104,6 +104,33 @@ export function CreditsSection({ t }: { t: Translations }) {
                 </div>
               </div>
             </div>
+            {/* Website Developer */}
+            <div className="glass-card rounded-2xl p-6 transition-all duration-300 group md:col-span-2 md:w-[calc(50%-0.75rem)] md:mx-auto">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#87CEEB] to-[#98D8C8] flex items-center justify-center shrink-0">
+                  <Code2 className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-[#2C3E50] mb-2">
+                    {t.credits.websiteDev}
+                  </h3>
+                  <p className="text-sm text-[#5a6a7a] mb-2">
+                    {t.credits.leon4rdodevDesc}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href="https://github.com/leon4rdodev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs px-2 py-1 rounded-full bg-[#87CEEB]/20 text-[#2C3E50] hover:bg-[#87CEEB]/40 transition-colors cursor-pointer inline-flex items-center gap-1"
+                    >
+                      @leon4rdodev
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* GitHub Repository */}

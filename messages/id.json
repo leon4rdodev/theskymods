@@ -97,7 +97,9 @@
         "title": "Ucapan Terima Kasih",
         "description": "Situs ini mendistribusikan alat yang dibuat oleh pengembang berbakat. Semua kredit diberikan kepada pembuat asli.",
         "canvas": "Modloader ringan dan dapat diperluas yang memungkinkan pemuatan plugin kustom di Sky",
-        "libtsm": "Port Android dari That Sky Mod, perpustakaan modifikasi lengkap untuk game",
+        "libtsm": "Porting Android dari That Sky Mod, perpustakaan modding lengkap untuk game ini",
+        "websiteDev": "Pengembang Web",
+        "leon4rdodevDesc": "Bertanggung jawab atas desain dan pemeliharaan situs ini. Memfasilitasi akses mod untuk komunitas.",
         "repository": "Repositori XeTrinityz",
         "repoDescription": "Semua file didistribusikan dari repositori XeTrinityz. Terima kasih khusus kepada XeTrinityz atas karya mereka di ThatSkyMod."
     },

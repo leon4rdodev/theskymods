@@ -94,8 +94,8 @@
         "description": "This site distributes tools created by talented developers. All credit goes to the original creators.",
         "canvas": "Lightweight and extensible modloader that allows loading custom plugins in Sky",
         "libtsm": "Android port of That Sky Mod, a complete modification library for the game",
-        "repository": "Official GitHub Repository",
-        "repoDescription": "All files are distributed from the official ThatskyMod repository. This site only provides a user-friendly interface to download them."
+        "repository": "XeTrinityz Repository",
+        "repoDescription": "All files are distributed from XeTrinityz's repository. Special thanks to XeTrinityz for their work on ThatSkyMod."
     },
     "tutorial": {
         "title": "How to Install Canvas",

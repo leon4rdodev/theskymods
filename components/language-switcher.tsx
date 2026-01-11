@@ -50,7 +50,7 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
         <Button
           variant="ghost"
           size="sm"
-          className="cursor-pointer rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-[#2C3E50] px-3 gap-2 transition-all duration-300 hover:scale-105"
+          className="cursor-pointer rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-[#2C3E50] px-3 gap-2 transition-all duration-300"
           aria-label="Select language"
         >
           <Globe className="h-4 w-4" />

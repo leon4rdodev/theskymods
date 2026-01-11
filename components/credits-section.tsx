@@ -94,7 +94,7 @@ export function CreditsSection({ t }: { t: Translations }) {
 
           {/* GitHub Repository */}
           <a
-            href="https://github.com/thatskymod/Sky-CotL-Scripts"
+            href="https://github.com/XeTrinityz/ThatSkyMod-Android/releases/"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-card rounded-2xl p-8 text-center hover:scale-[1.02] transition-all duration-300 block group"
@@ -108,7 +108,7 @@ export function CreditsSection({ t }: { t: Translations }) {
               {t.credits.repoDescription}
             </p>
             <p className="text-sm text-[#87CEEB] font-medium">
-              github.com/thatskymod/Sky-CotL-Scripts
+              github.com/XeTrinityz/ThatSkyMod-Android
             </p>
           </a>
         </div>

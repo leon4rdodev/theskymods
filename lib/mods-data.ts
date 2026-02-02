@@ -17,9 +17,9 @@ export const modsData: Mod[] = [
     id: "1",
     translationKey: "canvas",
     category: "gameplay",
-    version: "v1.6.9",
+    version: "v1.7.0",
     downloads: 0,
-    updatedAt: "2025-01-10",
+    updatedAt: "2025-02-02",
     image: "/canvas.webp",
     author: "artdeell & lukas0x1",
     authorGithub: [
@@ -28,29 +28,29 @@ export const modsData: Mod[] = [
     ],
     size: "11 MB",
     downloadUrl:
-      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.21.0/Canvas.apk",
+      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.22.1/Canvas.apk",
   },
   {
     id: "2",
     translationKey: "libtsm",
     category: "gameplay",
-    version: "v0.21.0",
+    version: "v0.22.1",
     downloads: 0,
-    updatedAt: "2025-01-10",
+    updatedAt: "2025-02-02",
     image: "/libtsm.webp",
     author: "XeTrinityz",
     authorGithub: "https://github.com/XeTrinityz",
     size: "4.27 MB",
     downloadUrl:
-      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.21.0/libTSM.so",
+      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.22.1/libTSM.so",
   },
   {
     id: "3",
     translationKey: "canvasEmulator",
     category: "gameplay",
-    version: "v1.6.9",
+    version: "v1.7.0",
     downloads: 0,
-    updatedAt: "2025-01-10",
+    updatedAt: "2025-02-02",
     image: "/canvas.webp",
     author: "artdeell & lukas0x1",
     authorGithub: [
@@ -59,7 +59,7 @@ export const modsData: Mod[] = [
     ],
     size: "11 MB",
     downloadUrl:
-      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.21.0/Canvas4Emulator.apk",
+      "https://github.com/XeTrinityz/ThatSkyMod-Android/releases/download/0.22.1/Canvas4Emulator.apk",
   },
 ];
 

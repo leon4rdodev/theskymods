@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   name: "The Sky Mods",
-  domain: process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu",
+  domain: process.env.NEXT_PUBLIC_DOMAIN || "https://skymods.vercel.app",
 
   // SEO Configuration
   seo: {

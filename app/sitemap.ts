@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { locales } from "../i18n.config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://theskymods.eu";
+  const baseUrl = "https://skymods.vercel.app";
   const now = new Date();
 
   // Define pages that exist for all locales

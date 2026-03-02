@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://theskymods.eu";
+  const baseUrl = "https://skymods.vercel.app";
 
   return {
     rules: [

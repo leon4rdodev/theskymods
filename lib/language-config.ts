@@ -52,7 +52,7 @@ export const getLanguageAlternatives = (): Record<string, string> => {
 
   locales.forEach((locale) => {
     alternatives[locale] = `${
-      process.env.NEXT_PUBLIC_DOMAIN || "https://theskymods.eu"
+      process.env.NEXT_PUBLIC_DOMAIN || "https://skymods.vercel.app"
     }/${locale}`;
   });
 

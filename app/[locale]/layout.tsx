@@ -158,13 +158,6 @@ export default async function LocaleLayout({
             }),
           }}
         />
-      </head>
-      <body className={`${nunito.className} font-sans antialiased`}>
-        {children}
-        <Toaster />
-        <CookieBanner locale={locale} />
-        <Analytics />
-        <SpeedInsights />
         <Script
           src={siteConfig.seo.monetagScript}
           data-zone={siteConfig.seo.monetagZone}
@@ -172,6 +165,13 @@ export default async function LocaleLayout({
           data-cfasync="false"
           async
         />
+      </head>
+      <body className={`${nunito.className} font-sans antialiased`}>
+        {children}
+        <Toaster />
+        <CookieBanner locale={locale} />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ export const siteConfig = {
     creator: "The Sky Mods",
     publisher: "The Sky Mods",
     googleVerification: "-GLBeiN6eJGBLTtMFeJKw8gSQ5TUbGNn8kkgeP7mUQo",
-    monetagVerification: "6e9ceb609bfbbc95943afbe9ca83da1d",
+    monetagVerification: "0d2a19d867e257d600ca104920bcc9fd",
 
     // Keywords that apply to all languages
     keywords: [

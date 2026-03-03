@@ -1,6 +1,5 @@
 import type React from "react";
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Nunito } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -158,13 +157,7 @@ export default async function LocaleLayout({
             }),
           }}
         />
-        <Script
-          src={siteConfig.seo.monetagScript}
-          data-zone={siteConfig.seo.monetagZone}
-          strategy="afterInteractive"
-          data-cfasync="false"
-          async
-        />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="215954" async data-cfasync="false"></script>
       </head>
       <body className={`${nunito.className} font-sans antialiased`}>
         {children}

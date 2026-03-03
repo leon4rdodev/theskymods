@@ -110,6 +110,9 @@ export async function generateMetadata({
     manifest: "/manifest.json",
     verification: {
       google: siteConfig.seo.googleVerification,
+      other: {
+        monetag: [siteConfig.seo.monetagVerification],
+      },
     },
   };
 }

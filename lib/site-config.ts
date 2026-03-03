@@ -14,6 +14,8 @@ export const siteConfig = {
     publisher: "The Sky Mods",
     googleVerification: "-GLBeiN6eJGBLTtMFeJKw8gSQ5TUbGNn8kkgeP7mUQo",
     monetagVerification: "0d2a19d867e257d600ca104920bcc9fd",
+    monetagScript: "https://quge5.com/88/tag.min.js",
+    monetagZone: "215954",
 
     // Keywords that apply to all languages
     keywords: [

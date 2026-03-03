@@ -1,5 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Nunito } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -164,6 +165,13 @@ export default async function LocaleLayout({
         <CookieBanner locale={locale} />
         <Analytics />
         <SpeedInsights />
+        <Script
+          src={siteConfig.seo.monetagScript}
+          data-zone={siteConfig.seo.monetagZone}
+          strategy="afterInteractive"
+          data-cfasync="false"
+          async
+        />
       </body>
     </html>
   );

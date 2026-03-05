@@ -110,9 +110,6 @@ export async function generateMetadata({
     manifest: "/manifest.json",
     verification: {
       google: siteConfig.seo.googleVerification,
-      other: {
-        monetag: [siteConfig.seo.monetagVerification],
-      },
     },
   };
 }
@@ -157,7 +154,6 @@ export default async function LocaleLayout({
             }),
           }}
         />
-        <script src="https://quge5.com/88/tag.min.js" data-zone="215954" async data-cfasync="false"></script>
       </head>
       <body className={`${nunito.className} font-sans antialiased`}>
         {children}

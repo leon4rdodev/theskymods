@@ -12,7 +12,7 @@ export const siteConfig = {
     author: "The Sky Mods Community",
     creator: "The Sky Mods",
     publisher: "The Sky Mods",
-    googleVerification: "-GLBeiN6eJGBLTtMFeJKw8gSQ5TUbGNn8kkgeP7mUQo",
+    googleVerification: "Ll07y-x3_SSRp6Jb4PTwCRyQdL6kDkdhKvfPZttFuSY",
     monetagVerification: "0d2a19d867e257d600ca104920bcc9fd",
     monetagScript: "https://quge5.com/88/tag.min.js",
     monetagZone: "215954",

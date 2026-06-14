@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ModCard } from "@/components/mod-card";
 import type { Locale, Translations } from "@/lib/translations";
 import { type Mod } from "@/lib/mods-data";
+import { AnimateIn } from "@/components/animate-in";
 
 interface ModsSectionProps {
   locale: Locale;
@@ -70,24 +71,27 @@ export function ModsSection({ locale, t, initialMods }: ModsSectionProps) {
     <section id="mods" className="py-20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
-            {t.mods.title}
-          </h2>
-          <p className="text-[#5a6a7a] max-w-xl mx-auto">{t.mods.subtitle}</p>
-        </div>
+        <AnimateIn>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
+              {t.mods.title}
+            </h2>
+            <p className="text-[#5a6a7a] max-w-xl mx-auto">{t.mods.subtitle}</p>
+          </div>
+        </AnimateIn>
 
         {/* Mods Grid - Side by side */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {mods.map((mod) => (
-            <ModCard
-              key={mod.id}
-              mod={mod}
-              onDownload={handleDownload}
-              isLoading={isLoading}
-              locale={locale}
-              t={t}
-            />
+          {mods.map((mod, index) => (
+            <AnimateIn key={mod.id} delay={index * 100}>
+              <ModCard
+                mod={mod}
+                onDownload={handleDownload}
+                isLoading={isLoading}
+                locale={locale}
+                t={t}
+              />
+            </AnimateIn>
           ))}
         </div>
       </div>

@@ -272,12 +272,12 @@ export function ContactInfo({ t }: ContactFormProps) {
               {t.contact.info.instagram}
             </p>
             <a
-              href="https://instagram.com/leon4rdo.dev"
+              href="https://instagram.com/0xleon4rdo"
               className="text-sm text-[#87CEEB] font-medium hover:text-[#98D8C8] transition-colors inline-flex items-center gap-1 cursor-pointer"
               target="_blank"
               rel="noopener noreferrer"
             >
-              @leon4rdo.dev
+              @0xleon4rdo
               <ExternalLink className="h-3 w-3" />
             </a>
           </div>

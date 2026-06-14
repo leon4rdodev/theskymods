@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Cloud, Home, Gamepad2, BookOpen, Mail } from "lucide-react";
+import { Cloud, Home, Gamepad2, BookOpen, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import type { Locale, Translations } from "@/lib/translations";
@@ -17,6 +17,34 @@ export function Header({ locale, t }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState("home");
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  // Prevent touch scroll on mobile when menu is open
+  useEffect(() => {
+    const preventTouch = (e: TouchEvent) => {
+      if (mobileMenuOpen) e.preventDefault();
+    };
+    if (mobileMenuOpen) {
+      document.addEventListener("touchmove", preventTouch, { passive: false });
+    }
+    return () => {
+      document.removeEventListener("touchmove", preventTouch);
+    };
+  }, [mobileMenuOpen]);
 
   // Scroll progress tracking and active section detection
   useEffect(() => {
@@ -94,6 +122,7 @@ export function Header({ locale, t }: HeaderProps) {
   };
 
   return (
+    <>
     <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between max-w-6xl mx-auto w-full">
@@ -148,52 +177,31 @@ export function Header({ locale, t }: HeaderProps) {
           <div className="flex items-center gap-2 md:hidden">
             <LanguageSwitcher currentLocale={locale} />
             <button
-              className="p-2 text-[#2C3E50] cursor-pointer"
+              className="p-2 text-[#2C3E50] cursor-pointer relative flex flex-col items-center justify-center w-10 h-10"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              <span
+                className={`block w-6 h-0.5 bg-current rounded-full transition-all duration-300 ease-in-out ${
+                  mobileMenuOpen
+                    ? "rotate-45 translate-y-[6px]"
+                    : "rotate-0 translate-y-0"
+                }`}
+              />
+              <span
+                className={`block w-6 h-0.5 bg-current rounded-full transition-all duration-300 ease-in-out my-[4px] ${
+                  mobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+                }`}
+              />
+              <span
+                className={`block w-6 h-0.5 bg-current rounded-full transition-all duration-300 ease-in-out ${
+                  mobileMenuOpen
+                    ? "-rotate-45 -translate-y-[6px]"
+                    : "rotate-0 translate-y-0"
+                }`}
+              />
             </button>
           </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden border-t border-white/20 overflow-hidden transition-all duration-300 ease-in-out ${
-            mobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <nav className="flex flex-col gap-4 py-4">
-            {navLinks.map((link) => {
-              let isActive = false;
-              if (link.href.includes("#")) {
-                const hash = link.href.split("#")[1];
-                isActive = activeSection === hash;
-              } else if (link.href === `/${locale}`) {
-                isActive =
-                  activeSection === "home" && pathname === `/${locale}`;
-              } else {
-                isActive = pathname === link.href;
-              }
-
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleScroll(e, link.href)}
-                  className={`text-sm font-medium transition-colors hover:text-[#87CEEB] cursor-pointer flex items-center gap-3 ${
-                    isActive ? "text-[#87CEEB]" : "text-[#2C3E50]"
-                  }`}
-                >
-                  <link.icon className="h-5 w-5" />
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
         </div>
 
         {/* Scroll Progress Bar */}
@@ -218,5 +226,48 @@ export function Header({ locale, t }: HeaderProps) {
         </div>
       </div>
     </header>
+
+    {/* Mobile Navigation */}
+    <div
+      className={`md:hidden fixed left-0 right-0 z-40 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-lg transition-all duration-300 ease-in-out ${
+        mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+      style={{ top: "64px", height: "calc(100dvh - 64px)" }}
+    >
+      <nav
+        className={`flex flex-col items-center justify-center h-full gap-8 px-4 transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? "translate-y-0" : "translate-y-4"
+        }`}
+      >
+        {navLinks.map((link, index) => {
+          let isActive = false;
+          if (link.href.includes("#")) {
+            const hash = link.href.split("#")[1];
+            isActive = activeSection === hash;
+          } else if (link.href === `/${locale}`) {
+            isActive =
+              activeSection === "home" && pathname === `/${locale}`;
+          } else {
+            isActive = pathname === link.href;
+          }
+
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleScroll(e, link.href)}
+              style={{ animationDelay: `${index * 100}ms` }}
+              className={`text-2xl font-semibold transition-colors hover:text-[#87CEEB] cursor-pointer flex items-center gap-4 ${
+                isActive ? "text-[#87CEEB]" : "text-[#2C3E50]"
+              } ${mobileMenuOpen ? "animate-mobile-link-in" : ""}`}
+            >
+              <link.icon className="h-8 w-8" />
+              {link.label}
+            </Link>
+          );
+        })}
+      </nav>
+    </div>
+    </>
   );
 }

@@ -270,7 +270,7 @@ export const siteConfig = {
 
   // Social Media
   social: {
-    instagram: "@leon4rdo.dev",
+    instagram: "@0xleon4rdo",
   },
 
   // Images

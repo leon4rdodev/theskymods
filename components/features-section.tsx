@@ -2,6 +2,7 @@
 
 import { Shield, Zap, Heart, Download } from "lucide-react";
 import type { Translations } from "@/lib/translations";
+import { AnimateIn } from "@/components/animate-in";
 
 export function FeaturesSection({ t }: { t: Translations }) {
   const features = [
@@ -38,21 +39,21 @@ export function FeaturesSection({ t }: { t: Translations }) {
   return (
     <section className="py-20 bg-linear-to-b from-white to-[#E8F4F8]/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
-            {t.features.title}
-          </h2>
-          <p className="text-[#5a6a7a] max-w-2xl mx-auto">
-            {t.features.subtitle}
-          </p>
-        </div>
+        <AnimateIn>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
+              {t.features.title}
+            </h2>
+            <p className="text-[#5a6a7a] max-w-2xl mx-auto">
+              {t.features.subtitle}
+            </p>
+          </div>
+        </AnimateIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="glass-card rounded-2xl p-6 hover:scale-105 transition-all duration-300 group"
-            >
+            <AnimateIn key={index} delay={index * 100}>
+              <div className="glass-card rounded-2xl p-6 hover:scale-105 transition-all duration-300 group">
               <div
                 className={`${feature.bgColor} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
               >
@@ -65,6 +66,7 @@ export function FeaturesSection({ t }: { t: Translations }) {
                 {feature.description}
               </p>
             </div>
+          </AnimateIn>
           ))}
         </div>
       </div>

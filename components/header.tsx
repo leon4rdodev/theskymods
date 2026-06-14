@@ -229,7 +229,7 @@ export function Header({ locale, t }: HeaderProps) {
 
     {/* Mobile Navigation */}
     <div
-      className={`md:hidden fixed left-0 right-0 z-40 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-lg transition-all duration-300 ease-in-out ${
+      className={`md:hidden fixed left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300 ease-in-out ${
         mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       style={{ top: "64px", height: "calc(100dvh - 64px)" }}

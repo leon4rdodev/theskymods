@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import en from "@/messages/en.json";
 
-export default function NotFound() {
+export default function GlobalNotFound() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="absolute inset-0 pointer-events-none">

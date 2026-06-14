@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Cloud, Home } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -9,15 +9,13 @@ import { Button } from "@/components/ui/button";
 import es from "@/messages/es.json";
 import en from "@/messages/en.json";
 import ja from "@/messages/ja.json";
-import id from "@/messages/id.json";
-import type { Locale } from "@/i18n.config";
 
-const dictionaries: Record<string, typeof en> = { es, en, ja, id };
+const dictionaries = { es, en, ja };
 
 export default function NotFound() {
-  const params = useParams();
-  const locale = (params.locale as Locale) || "en";
-  const t = dictionaries[locale] || en;
+  const pathname = usePathname();
+  const locale = (pathname.split("/")[1] || "es") as "es" | "en" | "ja";
+  const t = dictionaries[locale] || dictionaries.es;
 
   return (
     <div className="min-h-screen flex flex-col relative">
@@ -32,9 +30,9 @@ export default function NotFound() {
           style={{ animationDelay: "5s" }}
         />
       </div>
-      <Header locale={locale as Locale} t={t} />
-      <main className="flex-1 flex flex-col items-center px-4 pt-8 md:pt-16 pb-48">
-        <div className="max-w-2xl w-full text-center">
+      <Header locale={locale as "es" | "en"} t={t} />
+      <main className="flex-1 flex items-center justify-center px-4 py-16">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Animated Cloud Icon */}
           <div className="relative mb-8 inline-block">
             <div className="relative z-10">

@@ -1,5 +1,4 @@
-import "./globals.css";
-
+// Root layout - redirects to locale-specific layouts
 export default function RootLayout({
   children,
 }: {

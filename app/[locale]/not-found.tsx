@@ -1,13 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Cloud, Home } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import es from "@/messages/es.json";
 import en from "@/messages/en.json";
+import ja from "@/messages/ja.json";
+import id from "@/messages/id.json";
+import type { Locale } from "@/i18n.config";
+
+const dictionaries: Record<string, typeof en> = { es, en, ja, id };
 
 export default function NotFound() {
+  const params = useParams();
+  const locale = (params.locale as Locale) || "en";
+  const t = dictionaries[locale] || en;
+
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="absolute inset-0 pointer-events-none">
@@ -21,9 +32,9 @@ export default function NotFound() {
           style={{ animationDelay: "5s" }}
         />
       </div>
-      <Header locale="en" t={en} />
-      <main className="flex-1 flex items-center justify-center px-4 py-16">
-        <div className="max-w-2xl mx-auto text-center">
+      <Header locale={locale as Locale} t={t} />
+      <main className="flex-1 flex flex-col items-center px-4 pt-8 md:pt-16 pb-48">
+        <div className="max-w-2xl w-full text-center">
           {/* Animated Cloud Icon */}
           <div className="relative mb-8 inline-block">
             <div className="relative z-10">
@@ -40,21 +51,21 @@ export default function NotFound() {
           {/* Message */}
           <div className="glass-card p-8 rounded-3xl mb-8 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50]">
-              {en.notFound.title}
+              {t.notFound.title}
             </h2>
             <p className="text-lg text-[#5a6a7a] max-w-md mx-auto">
-              {en.notFound.description}
+              {t.notFound.description}
             </p>
           </div>
 
           {/* Back to Home Button */}
-          <Link href="/en">
+          <Link href={`/${locale}`}>
             <Button
               size="lg"
               className="bg-linear-to-r from-[#87CEEB] to-[#98D8C8] text-[#1a2332] font-semibold px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 glow cursor-pointer"
             >
               <Home className="mr-2 h-5 w-5" />
-              {en.notFound.backHome}
+              {t.notFound.backHome}
             </Button>
           </Link>
 
@@ -66,7 +77,7 @@ export default function NotFound() {
           </div>
         </div>
       </main>
-      <Footer t={en} />
+      <Footer t={t} />
     </div>
   );
 }

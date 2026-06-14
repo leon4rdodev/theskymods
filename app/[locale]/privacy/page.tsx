@@ -15,7 +15,18 @@ export default async function PrivacyPage({
   const t = await getTranslations(locale);
 
   return (
-    <div className="min-h-screen flex flex-col pt-9 bg-linear-to-b from-[#E8F4F8] via-white to-[#87CEEB]/10">
+    <div className="min-h-screen flex flex-col pt-9 relative">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 right-1/4 w-80 h-80 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-24 left-12 w-72 h-72 bg-[#98D8C8]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-2/3 right-8 w-56 h-56 bg-[#FFB6C1]/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5.5s" }}
+        />
+      </div>
       <Header locale={locale} t={t} />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-16">

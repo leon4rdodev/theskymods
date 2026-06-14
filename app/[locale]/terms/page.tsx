@@ -14,7 +14,18 @@ export default async function TermsPage({
   const t = await getTranslations(locale);
 
   return (
-    <div className="min-h-screen flex flex-col pt-9 bg-linear-to-b from-[#E8F4F8] via-white to-[#87CEEB]/10">
+    <div className="min-h-screen flex flex-col pt-9 relative">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-72 h-72 bg-[#F4D03F]/15 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-16 right-10 w-88 h-88 bg-[#FF9A56]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2.5s" }}
+        />
+        <div
+          className="absolute top-1/2 right-1/3 w-60 h-60 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5s" }}
+        />
+      </div>
       <Header locale={locale} t={t} />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-16">

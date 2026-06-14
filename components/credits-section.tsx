@@ -8,15 +8,15 @@ export function CreditsSection({ t }: { t: Translations }) {
   return (
     <section className="relative overflow-hidden py-20 bg-transparent">
       {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#87CEEB]/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-24 right-12 w-80 h-80 bg-[#FFB6C1]/15 rounded-full blur-3xl animate-float" />
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-[#F4D03F]/20 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
+          className="absolute bottom-20 left-8 w-72 h-72 bg-[#F4D03F]/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3s" }}
         />
         <div
-          className="absolute top-40 right-1/4 w-64 h-64 bg-[#FFB6C1]/15 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "4s" }}
+          className="absolute top-1/3 left-1/2 w-60 h-60 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5s" }}
         />
       </div>
 
@@ -42,9 +42,9 @@ export function CreditsSection({ t }: { t: Translations }) {
           </AnimateIn>
 
           {/* Credits Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             {/* Canvas Creators */}
-            <AnimateIn delay={0} as="span">
+            <AnimateIn delay={0} className="w-full md:w-[calc(50%-0.75rem)]">
               <div className="glass-card rounded-2xl p-6 transition-all duration-300 group">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#87CEEB] to-[#98D8C8] flex items-center justify-center shrink-0">
@@ -83,7 +83,7 @@ export function CreditsSection({ t }: { t: Translations }) {
           </AnimateIn>
 
             {/* LibTSM Creator */}
-            <AnimateIn delay={100} as="span">
+            <AnimateIn delay={100} className="w-full md:w-[calc(50%-0.75rem)]">
               <div className="glass-card rounded-2xl p-6 transition-all duration-300 group">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#98D8C8] to-[#FFB6C1] flex items-center justify-center shrink-0">
@@ -113,8 +113,8 @@ export function CreditsSection({ t }: { t: Translations }) {
             </AnimateIn>
 
             {/* Website Developer */}
-            <AnimateIn delay={200} as="span">
-              <div className="glass-card rounded-2xl p-6 transition-all duration-300 group md:col-span-2 md:w-[calc(50%-0.75rem)] md:mx-auto">
+            <AnimateIn delay={200} className="w-full md:w-[calc(50%-0.75rem)]">
+              <div className="glass-card rounded-2xl p-6 transition-all duration-300 group">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#87CEEB] to-[#98D8C8] flex items-center justify-center shrink-0">
                     <Code2 className="h-6 w-6 text-white" />

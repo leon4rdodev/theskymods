@@ -37,7 +37,18 @@ export function FeaturesSection({ t }: { t: Translations }) {
   ];
 
   return (
-    <section className="py-20 bg-linear-to-b from-white to-[#E8F4F8]/30">
+    <section className="relative py-20">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 right-20 w-80 h-80 bg-[#98D8C8]/15 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-24 left-8 w-64 h-64 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/3 w-56 h-56 bg-[#F4D03F]/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5s" }}
+        />
+      </div>
       <div className="container mx-auto px-4">
         <AnimateIn>
           <div className="text-center mb-12">
@@ -66,7 +77,7 @@ export function FeaturesSection({ t }: { t: Translations }) {
                 {feature.description}
               </p>
             </div>
-          </AnimateIn>
+            </AnimateIn>
           ))}
         </div>
       </div>

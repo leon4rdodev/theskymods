@@ -18,7 +18,18 @@ export default function NotFound() {
   const t = dictionaries[locale] || dictionaries.es;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 left-1/4 w-80 h-80 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-20 right-8 w-96 h-96 bg-[#FFB6C1]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-1/2 left-8 w-56 h-56 bg-[#98D8C8]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5s" }}
+        />
+      </div>
       <Header locale={locale as "es" | "en"} t={t} />
       <main className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="max-w-2xl mx-auto text-center">

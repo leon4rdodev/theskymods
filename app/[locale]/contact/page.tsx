@@ -10,13 +10,17 @@ import {
 
 function ContactContent({ t }: { t: Translations }) {
   return (
-    <section className="pt-26">
+    <section className="relative pt-26">
       {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-[#87CEEB]/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-16 left-1/3 w-80 h-80 bg-[#98D8C8]/15 rounded-full blur-3xl animate-float" />
         <div
-          className="absolute bottom-20 left-10 w-80 h-80 bg-[#F4D03F]/15 rounded-full blur-3xl animate-float"
+          className="absolute bottom-20 right-8 w-72 h-72 bg-[#F4D03F]/15 rounded-full blur-3xl animate-float"
           style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-1/2 right-1/4 w-60 h-60 bg-[#FFB6C1]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "6s" }}
         />
       </div>
 

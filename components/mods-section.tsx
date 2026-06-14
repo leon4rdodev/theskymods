@@ -68,7 +68,18 @@ export function ModsSection({ locale, t, initialMods }: ModsSectionProps) {
   };
 
   return (
-    <section id="mods" className="py-20">
+    <section id="mods" className="relative py-20">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#FF9A56]/15 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-16 left-12 w-72 h-72 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2.5s" }}
+        />
+        <div
+          className="absolute top-1/3 right-1/3 w-60 h-60 bg-[#FFB6C1]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5s" }}
+        />
+      </div>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <AnimateIn>
@@ -81,9 +92,9 @@ export function ModsSection({ locale, t, initialMods }: ModsSectionProps) {
         </AnimateIn>
 
         {/* Mods Grid - Side by side */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
           {mods.map((mod, index) => (
-            <AnimateIn key={mod.id} delay={index * 100}>
+            <AnimateIn key={mod.id} delay={index * 100} className="w-full md:w-[calc(50%-0.75rem)]">
               <ModCard
                 mod={mod}
                 onDownload={handleDownload}

@@ -17,6 +17,7 @@ export function Header({ locale, t }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -54,6 +55,8 @@ export function Header({ locale, t }: HeaderProps) {
       const winHeightPx =
         (document.documentElement.scrollHeight || document.body.scrollHeight) -
         (document.documentElement.clientHeight || window.innerHeight);
+
+      setIsScrolled(scrollPx > 10);
 
       if (winHeightPx <= 0) {
         setScrollProgress(0);
@@ -123,7 +126,11 @@ export function Header({ locale, t }: HeaderProps) {
 
   return (
     <>
-    <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled || mobileMenuOpen
+            ? "bg-white/80 backdrop-blur-md border-b border-gray-100"
+            : "bg-transparent border-b border-transparent"
+        }`}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between max-w-6xl mx-auto w-full">
           {/* Logo */}

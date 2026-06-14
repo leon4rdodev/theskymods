@@ -14,7 +14,18 @@ export default async function DisclaimerPage({
   const t = await getTranslations(locale);
 
   return (
-    <div className="min-h-screen flex flex-col pt-9 bg-linear-to-b from-[#E8F4F8] via-white to-[#87CEEB]/10">
+    <div className="min-h-screen flex flex-col pt-9 relative">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-24 right-8 w-80 h-80 bg-[#F4D03F]/12 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-20 left-16 w-72 h-72 bg-[#FF9A56]/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-1/3 right-1/2 w-56 h-56 bg-[#FFB6C1]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "5.5s" }}
+        />
+      </div>
       <Header locale={locale} t={t} />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-16">

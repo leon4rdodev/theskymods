@@ -5,7 +5,18 @@ import { AnimateIn } from "@/components/animate-in";
 
 export function InstallationSteps({ t }: { t: Translations }) {
   return (
-    <section id="installation" className="py-20 bg-muted/30">
+    <section id="installation" className="relative py-20">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 left-1/4 w-80 h-80 bg-[#87CEEB]/15 rounded-full blur-3xl animate-float" />
+        <div
+          className="absolute bottom-20 right-16 w-72 h-72 bg-[#98D8C8]/12 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3.5s" }}
+        />
+        <div
+          className="absolute top-2/3 left-8 w-52 h-52 bg-[#F4D03F]/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "6s" }}
+        />
+      </div>
       <div className="container mx-auto px-4">
         <AnimateIn>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#2C3E50]">

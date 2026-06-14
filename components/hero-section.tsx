@@ -11,9 +11,9 @@ export function HeroSection({ t }: { t: Translations }) {
   };
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
+    <section className="relative py-20 md:py-32">
       {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#87CEEB]/20 rounded-full blur-3xl animate-float" />
         <div
           className="absolute bottom-20 right-10 w-96 h-96 bg-[#F4D03F]/20 rounded-full blur-3xl animate-float"
@@ -28,16 +28,6 @@ export function HeroSection({ t }: { t: Translations }) {
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <AnimateIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
-              <Sparkles className="h-4 w-4 text-[#F4D03F]" />
-              <span className="text-sm font-medium text-[#2C3E50]">
-                Sky: Children of the Light
-              </span>
-            </div>
-          </AnimateIn>
-
           {/* Title */}
           <AnimateIn delay={100}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
